@@ -1,0 +1,20 @@
+global:
+  scrape_interval: 30s # Set the scrape interval to every 30 seconds.
+  evaluation_interval: 30s # Evaluate rules every 30 seconds.
+
+remote_write:
+  - url: <MONITORING_URL>
+    authorization:
+      credentials: <MONITORING_CREDENTIALS>
+    write_relabel_configs:
+      - source_labels: [job]
+        regex: "charon"
+        action: keep # Keeps charon metrics and drop metrics from other containers.
+
+scrape_configs:
+  - job_name: "charon"
+    static_configs:
+      - targets: <CHARON_TARGETS> # ["cluster-1:3620"]
+  - job_name: "validator"
+    static_configs:
+      - targets: <VALIDATOR_TARGETS> # ["cluster-1:8008"]

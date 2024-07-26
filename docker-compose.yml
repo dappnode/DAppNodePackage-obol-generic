@@ -1,0 +1,181 @@
+version: "3.5"
+services:
+  cluster-1:
+    build:
+      context: cluster
+      args:
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.2
+        STAKER_SCRIPTS_VERSION: v0.1.0
+        CLUSTER_ID: 1
+    restart: on-failure
+    volumes:
+      - charon-1-data:/opt/charon/.charon
+      - validator-1-data:/opt/validator/data
+    environment:
+      - DEFINITION_FILE_URL
+      - CHARON_LOG_LEVEL=info
+      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
+      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_LOKI_SERVICE=cluster-1
+      - ENABLE_MEV_BOOST=false
+      - CHARON_EXTRA_OPTS
+      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
+      - GRAFFITI=validating_from_DAppNode
+      - JAVA_OPTS=-Xmx5g
+      - SIGN_EXIT=false
+      - EXIT_EPOCH
+      - VALIDATOR_EXTRA_OPTS
+      - CUSTOM_BEACON_NODE_URLS
+    healthcheck:
+      test: wget -qO- http://localhost:3620/readyz
+    security_opt:
+      - seccomp:unconfined
+  cluster-2:
+    build:
+      context: cluster
+      args:
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.2
+        STAKER_SCRIPTS_VERSION: v0.1.0
+        CLUSTER_ID: 2
+    restart: on-failure
+    volumes:
+      - charon-2-data:/opt/charon/.charon
+      - validator-2-data:/opt/validator/data
+    environment:
+      - DEFINITION_FILE_URL
+      - CHARON_LOG_LEVEL=info
+      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
+      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_LOKI_SERVICE=cluster-2
+      - ENABLE_MEV_BOOST=false
+      - CHARON_EXTRA_OPTS
+      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
+      - GRAFFITI=validating_from_DAppNode
+      - JAVA_OPTS=-Xmx5g
+      - SIGN_EXIT=false
+      - EXIT_EPOCH
+      - VALIDATOR_EXTRA_OPTS
+      - CUSTOM_BEACON_NODE_URLS
+    healthcheck:
+      test: wget -qO- http://localhost:3620/readyz
+    security_opt:
+      - seccomp:unconfined
+  cluster-3:
+    build:
+      context: cluster
+      args:
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.2
+        STAKER_SCRIPTS_VERSION: v0.1.0
+        CLUSTER_ID: 3
+    restart: on-failure
+    volumes:
+      - charon-3-data:/opt/charon/.charon
+      - validator-3-data:/opt/validator/data
+    environment:
+      - DEFINITION_FILE_URL
+      - CHARON_LOG_LEVEL=info
+      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
+      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_LOKI_SERVICE=cluster-3
+      - ENABLE_MEV_BOOST=false
+      - CHARON_EXTRA_OPTS
+      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
+      - GRAFFITI=validating_from_DAppNode
+      - JAVA_OPTS=-Xmx5g
+      - SIGN_EXIT=false
+      - EXIT_EPOCH
+      - VALIDATOR_EXTRA_OPTS
+      - CUSTOM_BEACON_NODE_URLS
+    healthcheck:
+      test: wget -qO- http://localhost:3620/readyz
+    security_opt:
+      - seccomp:unconfined
+  cluster-4:
+    build:
+      context: cluster
+      args:
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.2
+        STAKER_SCRIPTS_VERSION: v0.1.0
+        CLUSTER_ID: 4
+    restart: on-failure
+    volumes:
+      - charon-4-data:/opt/charon/.charon
+      - validator-4-data:/opt/validator/data
+    environment:
+      - DEFINITION_FILE_URL
+      - CHARON_LOG_LEVEL=info
+      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
+      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_LOKI_SERVICE=cluster-4
+      - ENABLE_MEV_BOOST=false
+      - CHARON_EXTRA_OPTS
+      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
+      - GRAFFITI=validating_from_DAppNode
+      - JAVA_OPTS=-Xmx5g
+      - SIGN_EXIT=false
+      - EXIT_EPOCH
+      - VALIDATOR_EXTRA_OPTS
+      - CUSTOM_BEACON_NODE_URLS
+    healthcheck:
+      test: wget -qO- http://localhost:3620/readyz
+    security_opt:
+      - seccomp:unconfined
+  cluster-5:
+    build:
+      context: cluster
+      args:
+        CHARON_VERSION: v1.0.1
+        VALIDATOR_CLIENT_VERSION: v1.20.2
+        STAKER_SCRIPTS_VERSION: v0.1.0
+        CLUSTER_ID: 5
+    restart: on-failure
+    volumes:
+      - charon-5-data:/opt/charon/.charon
+      - validator-5-data:/opt/validator/data
+    environment:
+      - DEFINITION_FILE_URL
+      - CHARON_LOG_LEVEL=info
+      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
+      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_LOKI_SERVICE=cluster-5
+      - ENABLE_MEV_BOOST=false
+      - CHARON_EXTRA_OPTS
+      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
+      - GRAFFITI=validating_from_DAppNode
+      - JAVA_OPTS=-Xmx5g
+      - SIGN_EXIT=false
+      - EXIT_EPOCH
+      - VALIDATOR_EXTRA_OPTS
+      - CUSTOM_BEACON_NODE_URLS
+    healthcheck:
+      test: wget -qO- http://localhost:3620/readyz
+    security_opt:
+      - seccomp:unconfined
+  prometheus:
+    build:
+      context: prometheus
+      args:
+        PROMETHEUS_VERSION: v2.51.1
+    environment:
+      MONITORING_URL: https://vm.monitoring.gcp.obol.tech/write
+      MONITORING_CREDENTIALS: ""
+      CHARONS_TO_MONITOR: 0
+    volumes:
+      - prometheus-data:/prometheus
+    restart: on-failure
+volumes:
+  charon-1-data: {}
+  charon-2-data: {}
+  charon-3-data: {}
+  charon-4-data: {}
+  charon-5-data: {}
+  validator-1-data: {}
+  validator-2-data: {}
+  validator-3-data: {}
+  validator-4-data: {}
+  validator-5-data: {}
+  prometheus-data: {}
