@@ -34,12 +34,12 @@ ENV CLUSTER_ID=${CLUSTER_ID} \
     SUPERVISOR_DIR=/opt/supervisor \
     STAKER_SCRIPTS_URL=https://github.com/dappnode/staker-package-scripts/releases/download/${STAKER_SCRIPTS_VERSION}
 
-ADD ${STAKER_SCRIPTS_URL}/consensus_tools.sh /etc/profile.d/
+ADD ${STAKER_SCRIPTS_URL}/dvt_lsd_tools.sh /etc/profile.d/
 
 RUN mkdir -p ${CHARON_ROOT_DIR} ${VALIDATOR_DATA_DIR} ${IMPORT_DIR} ${SUPERVISOR_DIR} && \
     chown -R charon:charon /opt/charon && \
     chmod +x /usr/local/bin/scripts/**/* && \
-    chmod +rx /etc/profile.d/consensus_tools.sh
+    chmod +rx /etc/profile.d/dvt_lsd_tools.sh
 
 # To import here the artifacts from file manager by default
 WORKDIR /import
