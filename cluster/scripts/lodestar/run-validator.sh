@@ -16,7 +16,7 @@ function run_lodestar_validator() {
         --distributed"
 
     if [ "$ENABLE_MEV_BOOST" = true ]; then
-        VALIDATOR_EXTRA_OPTS="--builder=true --builder.selection=builderonly $VALIDATOR_EXTRA_OPTS"
+        VALIDATOR_EXTRA_OPTS="--builder=true --builder.selection=builderalways $VALIDATOR_EXTRA_OPTS"
     fi
 
     if [ -n "$VALIDATOR_EXTRA_OPTS" ]; then
