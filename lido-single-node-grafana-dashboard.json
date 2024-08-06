@@ -1,4 +1,14 @@
 {
+  "__inputs": [
+    {
+      "description": "",
+      "label": "Prometheus",
+      "name": "DS_PROMETHEUS",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus",
+      "type": "datasource"
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -45,7 +55,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -93,7 +103,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "1",
           "refId": "A"
@@ -105,7 +115,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -169,7 +179,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "up{job=\"geth\"}",
           "refId": "A"
@@ -181,7 +191,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Peers connected with our execution client. Also number of peers we dialled and we are serving.",
       "fieldConfig": {
@@ -232,7 +242,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "p2p_peers",
@@ -247,7 +257,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Memory used by execution client.",
       "fieldConfig": {
@@ -326,7 +336,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "rate(system_memory_allocs[1m])",
@@ -337,7 +347,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "system_memory_used",
@@ -349,7 +359,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "system_memory_held",
@@ -365,7 +375,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -445,7 +455,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "system_cpu_sysload",
           "format": "time_series",
@@ -456,7 +466,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "system_cpu_syswait",
           "format": "time_series",
@@ -467,7 +477,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "system_cpu_procload",
           "format": "time_series",
@@ -482,7 +492,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -531,7 +541,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "chain_head_header",
           "refId": "A"
@@ -556,7 +566,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -604,7 +614,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "1",
           "refId": "A"
@@ -616,7 +626,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "",
       "fieldConfig": {
@@ -708,7 +718,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Lighthouse's reported current slot (unsafe not finalised)",
       "fieldConfig": {
@@ -784,7 +794,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "The sync status for lighthouse's peers",
       "fieldConfig": {
@@ -852,7 +862,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "exemplar": false,
           "expr": "sync_peers_per_status",
@@ -869,7 +879,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Peers that have dialed us. Indicates if our node is reachable",
       "fieldConfig": {
@@ -919,7 +929,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "exemplar": false,
           "expr": "network_inbound_peers",
@@ -931,7 +941,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "exemplar": false,
           "expr": "network_outbound_peers",
@@ -950,7 +960,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Identifies if there is an upstream execution client connected",
       "fieldConfig": {
@@ -1041,7 +1051,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "sync_eth1_connected",
           "interval": "",
@@ -1055,7 +1065,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Identifies if the consensus client is synced",
       "fieldConfig": {
@@ -1123,7 +1133,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "sync_eth2_synced",
           "interval": "",
@@ -1150,7 +1160,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -1198,7 +1208,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "expr": "1",
           "refId": "A"
@@ -1210,7 +1220,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Status returned from the `/readyz` health status endpoint. Unhealthy reasons include beacon node problems, charon p2p problems, or validator client problems.",
       "fieldConfig": {
@@ -1322,7 +1332,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1341,7 +1351,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Successful cluster duty percentage by type over the whole time range",
       "fieldConfig": {
@@ -1395,7 +1405,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "(\n    sum(increase(core_tracker_success_duties_total{job=\"charon\"}[$__range])) by (duty)\n) \n/ \n( \n    sum(increase(core_tracker_expect_duties_total{job=\"charon\"}[$__range])) by (duty) \n) > 0",
@@ -1410,7 +1420,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Average beacon node score for the whole time window. The score is a combination of:\n - **errors**: the ratio or errors returned by the beacon node \n - **latency**: how fast or slow the beacon node is responding\n\n\nThe performance of the Beacon node is critical to the performance of the validators and therefore rewards.  ",
       "fieldConfig": {
@@ -1464,7 +1474,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1481,7 +1491,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Information about the charon cluster.\n\n- **Network**: The blockchain network \n- **Operators/Nodes**: The number of operators or nodes or peers in the charon DV cluster.\n- **Threshold**: The minimum number of participating nodes (also quorum).\n- **Validators**: The number of validators added to the cluster, each validator is staking 32 ETH. ",
       "fieldConfig": {
@@ -1570,7 +1580,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1585,7 +1595,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1598,7 +1608,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1612,7 +1622,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1626,7 +1636,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1645,7 +1655,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "- **Peer**: The peer's name (inferred from their *charon-enr-private-key*)\n- **You**: ⭐️ is this local charon node\n- **Connected**: Whether you are currently connected to this peer.\n- **Direct**: Whether the connection is *direct* (👍) or *relay* (👎) \n- **Latency**: The time messages take to travel to/from the peer.\n- **Version**: The version of the peer's charon node\n- **Supported**: Whether the peers charon version is supported/compatible or not.\n- **Uptime**\" The duration since peer was restarted.\n- **🚧Attest**: Number of attestation duties missed in the time window.\n- **🚧Propose**: Number of block proposal duties missed in the time window.\n- **🚧Other**: Number of other duties missed in the time window.\n\n",
       "fieldConfig": {
@@ -2043,7 +2053,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2056,7 +2066,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2070,7 +2080,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2085,7 +2095,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2100,7 +2110,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2115,7 +2125,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2129,7 +2139,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2143,7 +2153,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2158,7 +2168,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2173,7 +2183,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2188,7 +2198,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2303,7 +2313,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "A lodestar validator client serving as part of this distributed validator cluster.",
       "fieldConfig": {
@@ -2352,7 +2362,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "1",
@@ -2367,7 +2377,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -2432,7 +2442,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "vc_indices_count",
@@ -2448,7 +2458,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -2522,7 +2532,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "vc_published_attestations_total",
@@ -2538,7 +2548,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -2591,7 +2601,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "vc_block_published_total",
@@ -2607,7 +2617,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "fieldConfig": {
         "defaults": {
@@ -2681,7 +2691,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "expr": "vc_published_aggregates_total",

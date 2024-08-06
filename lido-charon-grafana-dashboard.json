@@ -1,4 +1,14 @@
 {
+  "__inputs": [
+    {
+      "description": "",
+      "label": "Prometheus",
+      "name": "DS_PROMETHEUS",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus",
+      "type": "datasource"
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -69,7 +79,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Status returned from the `/readyz` health status endpoint. Unhealthy reasons include beacon node problems, charon p2p problems, or validator client problems.",
       "fieldConfig": {
@@ -181,7 +191,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -200,7 +210,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Successful cluster duty percentage by type over the whole time range",
       "fieldConfig": {
@@ -256,7 +266,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -274,7 +284,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Average beacon node score for the whole time window. The score is a combination of:\n - **errors**: the ratio or errors returned by the beacon node \n - **latency**: how fast or slow the beacon node is responding\n\n\nThe performance of the Beacon node is critical to the performance of the validators and therefore rewards.  ",
       "fieldConfig": {
@@ -328,7 +338,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -345,7 +355,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "Information about the charon cluster.\n\n- **Network**: The blockchain network \n- **Operators/Nodes**: The number of operators or nodes or peers in the charon DV cluster.\n- **Threshold**: The minimum number of participating nodes (also quorum).\n- **Validators**: The number of validators added to the cluster, each validator is staking 32 ETH. ",
       "fieldConfig": {
@@ -434,7 +444,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -449,7 +459,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -462,7 +472,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -476,7 +486,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -490,7 +500,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -509,7 +519,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "DS_PROMETHEUS"
       },
       "description": "- **Peer**: The peer's name (inferred from their *charon-enr-private-key*)\n- **You**: ⭐️ is this local charon node\n- **Connected**: Whether you are currently connected to this peer.\n- **Direct**: Whether the connection is *direct* (👍) or *relay* (👎) \n- **Latency**: The time messages take to travel to/from the peer.\n- **Version**: The version of the peer's charon node\n- **Supported**: Whether the peers charon version is supported/compatible or not.\n- **Uptime**\" The duration since peer was restarted.\n- **🚧Attest**: Number of attestation duties missed in the time window.\n- **🚧Propose**: Number of block proposal duties missed in the time window.\n- **🚧Other**: Number of other duties missed in the time window.\n\n",
       "fieldConfig": {
@@ -907,7 +917,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -920,7 +930,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -934,7 +944,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -949,7 +959,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -964,7 +974,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -979,7 +989,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -993,7 +1003,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1007,7 +1017,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1022,7 +1032,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1037,7 +1047,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1052,7 +1062,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1164,7 +1174,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "",
           "fieldConfig": {
@@ -1219,7 +1229,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1234,7 +1244,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1249,7 +1259,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1268,7 +1278,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Status returned from the `/readyz` health status endpoint. Unhealthy reasons include beacon node problems, charon p2p problems, or validator client problems.",
           "fieldConfig": {
@@ -1419,7 +1429,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1438,7 +1448,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Type of connections to each peer in the cluster during the time window:\n - 🟢 Green: Direct connection (this is the preferred)\n - 🟡 Yellow: Indirect relay connection (this is ok if only temporary)\n - 🔴 Red: No connection to peer (this is a problem)\n\nSee https://docs.obol.tech/docs/charon/networking#external-p2p-network",
           "fieldConfig": {
@@ -1499,7 +1509,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "(max(p2p_ping_success{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}) by (peer))\n+\n(1 * max(p2p_peer_connection_types{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",type=\"relay\"}) by (peer))\n+ \n(100 * max(p2p_peer_connection_types{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",type=\"direct\"}) by (peer))",
@@ -1516,7 +1526,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "",
           "fieldConfig": {
@@ -1627,7 +1637,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1641,7 +1651,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1657,7 +1667,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1671,7 +1681,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1685,7 +1695,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1699,7 +1709,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1713,7 +1723,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1727,7 +1737,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1746,7 +1756,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Status and balance of each validator by public key with links to beaconcha.in.\n\nIf present, the \"❗️Peer Exits\" column indicate the number of peers that submitted partially signed exits for each validator.",
           "fieldConfig": {
@@ -1943,7 +1953,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1959,7 +1969,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1974,7 +1984,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2039,7 +2049,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Warning (w) and error (e) logs grouped by topic. \n\nOccasional warns and errors are normal, but a significant increase indicate problems that require operators to investigate by looking at the actual logs entries.",
           "fieldConfig": {
@@ -2126,7 +2136,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(increase(app_log_error_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) by (topic) > 0 ",
@@ -2139,7 +2149,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(increase(app_log_warn_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) by (topic) > 0 ",
@@ -2156,7 +2166,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "- **Peer**: The peer's name (inferred from their *charon-enr-private-key*)\n- **You**: ⭐️ is this local charon node\n- **Connected**: Whether you are currently connected to this peer.\n- **Direct**: Whether the connection is *direct* (👍) or *relay* (👎) \n- **Latency**: The time messages take to travel to/from the peer.\n- **Uptime**\" The duration since peer was restarted.\n- **ClockDiff**: Difference between local and peer's clock time. More than 2s is bad.\n- **🚧Attest**: Number of attestation duties missed in the time window.\n- **🚧Propose**: Number of block proposal duties missed in the time window.\n- **🚧Other**: Number of other duties missed in the time window.\n\n",
           "fieldConfig": {
@@ -2525,7 +2535,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2538,7 +2548,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2552,7 +2562,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2567,7 +2577,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2581,7 +2591,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2596,7 +2606,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2611,7 +2621,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2626,7 +2636,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2640,7 +2650,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2654,7 +2664,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2669,7 +2679,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2684,7 +2694,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2813,7 +2823,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Completed duties by type over time.",
           "fieldConfig": {
@@ -2868,7 +2878,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -2886,7 +2896,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Successful duty participation per peer (filtered by selected duty) over time.",
           "fieldConfig": {
@@ -2940,7 +2950,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -2957,7 +2967,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Failed duties by type over time. Use data link to show logs.",
           "fieldConfig": {
@@ -3014,7 +3024,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3032,7 +3042,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Missed duty participation per peer (filtered by selected duty) over time.",
           "fieldConfig": {
@@ -3086,7 +3096,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -3103,7 +3113,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Failed duties percentage by type over time",
           "fieldConfig": {
@@ -3180,7 +3190,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3198,7 +3208,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Missed duty participation per duty (filtered by peer) over time.",
           "fieldConfig": {
@@ -3254,7 +3264,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -3271,7 +3281,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Number of failed duties by reason per time window. Note this is only available from v0.16.",
           "fieldConfig": {
@@ -3347,7 +3357,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(increase(core_tracker_failed_duty_reasons_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",duty=~\"$duty\"}[$interval])) by (reason) > 0 ",
@@ -3364,7 +3374,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Duties that was successfully broadcast to the Beacon Node, but that was never included on-chain. This could be due to broadcasting too late (too slow), but it could also just be to aspects of consensus layer out-of-our-control. See https://eth2book.info/bellatrix/part2/incentives/rewards/#remarks.",
           "fieldConfig": {
@@ -3441,7 +3451,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -3459,7 +3469,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -3546,7 +3556,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -3559,7 +3569,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -3577,7 +3587,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "The delay after the start of the slot when the duty was successfully broadcasted. ",
           "fieldConfig": {
@@ -3665,7 +3675,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(histogram_quantile(0.90, rate(core_bcast_broadcast_delay_seconds_bucket{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",duty=~\"$duty\"}[$interval]))) ",
@@ -3682,7 +3692,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -3769,7 +3779,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(histogram_quantile(0.90, increase(core_consensus_duration_seconds_bucket{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",duty=~\"$duty\"}[$interval]))) by (timer)",
@@ -3786,7 +3796,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -3872,7 +3882,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(core_consensus_decided_rounds{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",duty=~\"$duty\"}) by (timer)",
@@ -3889,7 +3899,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Number of consensus timeouts per time window.",
           "fieldConfig": {
@@ -3965,7 +3975,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(increase(core_consensus_timeout_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",duty=~\"$duty\"}[$interval])) by (timer) > 0",
@@ -3996,7 +4006,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -4074,7 +4084,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -4087,7 +4097,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(go_memstats_heap_inuse_bytes{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"})",
@@ -4103,7 +4113,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -4182,7 +4192,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(irate(process_cpu_seconds_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval]))",
@@ -4201,7 +4211,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -4292,7 +4302,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -4305,7 +4315,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(process_open_fds{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"})",
@@ -4322,7 +4332,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Total time spent on garbage collection per interval",
           "fieldConfig": {
@@ -4402,7 +4412,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(increase(go_gc_duration_seconds_sum{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) ",
@@ -4435,7 +4445,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "",
           "fieldConfig": {
@@ -4484,7 +4494,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -4511,7 +4521,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Upstream beacon node API request rate per second by endpoint",
           "fieldConfig": {
@@ -4612,7 +4622,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -4629,7 +4639,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Upstream beacon node API request latency (90th percentile) by endpoint by timewindow",
           "fieldConfig": {
@@ -4707,7 +4717,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -4724,7 +4734,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Number of errors per endpoint per time window",
           "fieldConfig": {
@@ -4798,7 +4808,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -4815,7 +4825,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Beacon node score over time",
           "fieldConfig": {
@@ -4901,7 +4911,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "clamp_min((clamp(app_monitoring_readyz{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"} == 1 OR app_monitoring_readyz{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"} == 4 OR app_monitoring_readyz{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"} == 5 OR app_monitoring_readyz{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"} == 6, 1, 1) OR on() vector(0))\n*\non()\n(\n    (\n0.5 * (1.0 - 10*(sum(increase(app_eth2_errors_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) / (sum(increase(app_eth2_latency_seconds_count{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval]))))) OR on() vector(0.5)\n    )\n    +\n    (\n        0.5 * (1.0 - clamp_max(histogram_quantile(0.99, sum(rate(app_eth2_latency_seconds_bucket{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) by (le)),1))\n    )\n), 0)",
@@ -4917,7 +4927,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Number of consensus layer P2P peers the beacon node is connected to",
           "fieldConfig": {
@@ -5000,7 +5010,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "app_beacon_node_peers{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}",
@@ -5030,7 +5040,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -5107,7 +5117,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -5124,7 +5134,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -5201,7 +5211,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -5218,7 +5228,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Number of errors per endpoint per time window",
           "fieldConfig": {
@@ -5292,7 +5302,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -5323,7 +5333,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Type of connections to each peer in the cluster during the time window:\n - 🟢 Green: Direct connection (this is the preferred)\n - 🟡 Yellow: Indirect relay connection (this is ok if only temporary)\n - 🔴 Red: No connection to peer (this is a problem)\n\nSee https://docs.obol.tech/docs/charon/networking#external-p2p-network",
           "fieldConfig": {
@@ -5383,7 +5393,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "(max(p2p_ping_success{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}) by (peer))\n+\n(1 * max(p2p_peer_connection_types{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",type=\"relay\"}) by (peer))\n+ \n(100 * max(p2p_peer_connection_types{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",type=\"direct\"}) by (peer))",
@@ -5400,7 +5410,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -5486,7 +5496,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -5503,7 +5513,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Time windows that contain ping errors per peer",
           "fieldConfig": {
@@ -5554,7 +5564,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(increase(p2p_ping_error_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\",peer=~\"$peer\"}[$interval])) by (peer) > 0",
@@ -5570,7 +5580,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -5637,7 +5647,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -5654,7 +5664,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -5732,7 +5742,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -5749,7 +5759,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Number of new libp2p connections per peer per time window",
           "fieldConfig": {
@@ -5828,7 +5838,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -5845,7 +5855,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "",
           "fieldConfig": {
@@ -5935,7 +5945,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "max(app_peerinfo_clock_offset_seconds{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=~\"$cluster_peer\"}) by (peer) ",
@@ -5951,7 +5961,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Avg Rate of P2P network bytes sent plus received per peer (bytes/second) ",
           "fieldConfig": {
@@ -6042,7 +6052,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(rate(p2p_peer_network_receive_bytes_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) by (peer) + sum(rate(p2p_peer_network_sent_bytes_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) by (peer)",
@@ -6058,7 +6068,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "fieldConfig": {
             "defaults": {
@@ -6108,7 +6118,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(p2p_relay_connections{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}) by (peer) > 0 ",
@@ -6124,7 +6134,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "Total P2P network bytes sent plus received per peer per time window (bytes per interval)",
           "fieldConfig": {
@@ -6215,7 +6225,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(increase(p2p_peer_network_receive_bytes_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) by (peer) + sum(increase(p2p_peer_network_sent_bytes_total{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}[$interval])) by (peer)",
@@ -6231,7 +6241,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "prometheus"
+            "uid": "DS_PROMETHEUS"
           },
           "description": "The number of active libp2p streams by peer or relay. Note this can be further grouped by direction and protocol.",
           "fieldConfig": {
@@ -6310,7 +6320,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "prometheus"
+                "uid": "DS_PROMETHEUS"
               },
               "editorMode": "code",
               "expr": "sum(p2p_peer_streams{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"}) by (peer)",
@@ -6343,7 +6353,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "prometheus"
+          "uid": "DS_PROMETHEUS"
         },
         "definition": "label_values(app_peer_name, cluster_name)",
         "description": "",
@@ -6371,7 +6381,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "prometheus"
+          "uid": "DS_PROMETHEUS"
         },
         "definition": "label_values(app_peer_name{cluster_name=\"$cluster_name\"}, cluster_hash)",
         "description": "",
@@ -6399,7 +6409,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "prometheus"
+          "uid": "DS_PROMETHEUS"
         },
         "definition": "label_values(app_peer_name{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\"}, cluster_peer)",
         "description": "",
@@ -6427,7 +6437,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "prometheus"
+          "uid": "DS_PROMETHEUS"
         },
         "definition": "label_values(app_peer_name{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"},job)",
         "description": "Prometheus job (can be ignored)",
@@ -6456,7 +6466,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "prometheus"
+          "uid": "DS_PROMETHEUS"
         },
         "definition": "label_values(app_peerinfo_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\", cluster_peer=\"$cluster_peer\"}, peer)",
         "description": "",
@@ -6643,7 +6653,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "prometheus"
+          "uid": "DS_PROMETHEUS"
         },
         "definition": "label_values(app_peer_name{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\"},cluster_network)",
         "description": "",
