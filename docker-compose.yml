@@ -5,7 +5,7 @@ services:
       context: cluster
       args:
         CHARON_VERSION: v1.0.1
-        VALIDATOR_CLIENT_VERSION: v1.20.2
+        VALIDATOR_CLIENT_VERSION: v1.21.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 1
     restart: on-failure
@@ -36,7 +36,7 @@ services:
       context: cluster
       args:
         CHARON_VERSION: v1.0.1
-        VALIDATOR_CLIENT_VERSION: v1.20.2
+        VALIDATOR_CLIENT_VERSION: v1.21.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 2
     restart: on-failure
@@ -67,7 +67,7 @@ services:
       context: cluster
       args:
         CHARON_VERSION: v1.0.1
-        VALIDATOR_CLIENT_VERSION: v1.20.2
+        VALIDATOR_CLIENT_VERSION: v1.21.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 3
     restart: on-failure
@@ -98,7 +98,7 @@ services:
       context: cluster
       args:
         CHARON_VERSION: v1.0.1
-        VALIDATOR_CLIENT_VERSION: v1.20.2
+        VALIDATOR_CLIENT_VERSION: v1.21.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 4
     restart: on-failure
@@ -129,7 +129,7 @@ services:
       context: cluster
       args:
         CHARON_VERSION: v1.0.1
-        VALIDATOR_CLIENT_VERSION: v1.20.2
+        VALIDATOR_CLIENT_VERSION: v1.21.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 5
     restart: on-failure
