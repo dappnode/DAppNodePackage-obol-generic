@@ -6,6 +6,10 @@ remote_write:
   - url: <MONITORING_URL>
     authorization:
       credentials: <MONITORING_CREDENTIALS>
+    relabel_configs:
+      - source_labels: []
+        target_label: "hardware_client"
+        replacement: "obol-in-dappnode"
     write_relabel_configs:
       - source_labels: [job]
         regex: "charon"
