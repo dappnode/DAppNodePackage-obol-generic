@@ -22,7 +22,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 22,
+  "id": 48,
   "links": [
     {
       "asDropdown": false,
@@ -48,7 +48,9 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "json-view",
+            "cellOptions": {
+              "type": "json-view"
+            },
             "inspect": false
           },
           "mappings": [],
@@ -72,15 +74,19 @@
       },
       "id": 19,
       "options": {
+        "cellHeight": "sm",
         "footer": {
+          "countRows": false,
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "frameIndex": 0,
         "showHeader": false
       },
-      "pluginVersion": "9.3.6",
+      "pluginVersion": "11.1.0",
       "targets": [
         {
           "datasource": "Prometheus",
@@ -201,18 +207,23 @@
         "graphMode": "area",
         "justifyMode": "auto",
         "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["last"],
+          "calcs": [
+            "last"
+          ],
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "text": {
           "titleSize": 15,
           "valueSize": 15
         },
-        "textMode": "auto"
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.6",
+      "pluginVersion": "11.1.0",
       "targets": [
         {
           "datasource": "Prometheus",
@@ -377,14 +388,19 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.6",
+      "pluginVersion": "11.1.0",
       "targets": [
         {
           "datasource": "Prometheus",
@@ -410,6 +426,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -425,6 +442,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -537,18 +555,23 @@
         "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
+        "showPercentChange": false,
         "text": {
           "titleSize": 15,
           "valueSize": 15
         },
-        "textMode": "auto"
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.3.6",
+      "pluginVersion": "11.1.0",
       "targets": [
         {
           "datasource": "Prometheus",
@@ -578,7 +601,6 @@
         }
       ],
       "title": "Cluster Info",
-      "transformations": [],
       "type": "stat"
     },
     {
@@ -591,7 +613,9 @@
           },
           "custom": {
             "align": "center",
-            "displayMode": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
             "inspect": false,
             "minWidth": 0,
             "width": 90
@@ -670,8 +694,11 @@
                 ]
               },
               {
-                "id": "custom.displayMode",
-                "value": "lcd-gauge"
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "lcd",
+                  "type": "gauge"
+                }
               },
               {
                 "id": "custom.width",
@@ -690,8 +717,10 @@
                 "value": "⭐"
               },
               {
-                "id": "custom.displayMode",
-                "value": "auto"
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "auto"
+                }
               },
               {
                 "id": "mappings",
@@ -863,9 +892,13 @@
       },
       "id": 54,
       "options": {
+        "cellHeight": "sm",
         "footer": {
+          "countRows": false,
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "frameIndex": 0,
@@ -877,7 +910,7 @@
           }
         ]
       },
-      "pluginVersion": "9.3.6",
+      "pluginVersion": "11.1.0",
       "targets": [
         {
           "datasource": "Prometheus",
@@ -1189,6 +1222,11 @@
           },
           "custom": {
             "fillOpacity": 100,
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
             "lineWidth": 0
           },
           "mappings": [],
@@ -1266,6 +1304,11 @@
           },
           "custom": {
             "fillOpacity": 100,
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
             "lineWidth": 0
           },
           "links": [
@@ -1338,6 +1381,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1351,6 +1395,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1416,7 +1461,7 @@
         {
           "datasource": "loki",
           "editorMode": "code",
-          "expr": "sum(count_over_time({service=\"charon\"} | logfmt | level=~`(warn|error)` [5m])) by (msg)",
+          "expr": "sum(count_over_time({cluster_hash=\"${cluster_hash}\"} | logfmt | level=~`(warn|error)` [5m])) by (msg)",
           "legendFormat": "{{msg}}",
           "queryType": "range",
           "refId": "A",
@@ -1450,7 +1495,7 @@
         {
           "datasource": "loki",
           "editorMode": "code",
-          "expr": "{service=\"charon\"} | logfmt | msg=`Duty failed` | line_format `{{.duty}}\t{{.reason}}`",
+          "expr": "{cluster_hash=\"${cluster_hash}\"}  | logfmt | msg=`Duty failed` | line_format `{{.duty}}\t{{.reason}}`",
           "legendFormat": "{{level}} [{{topic}}] {{msg}}",
           "queryType": "range",
           "refId": "A",
@@ -1468,6 +1513,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1481,6 +1527,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -1555,6 +1602,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1568,6 +1616,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -1642,6 +1691,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1655,6 +1705,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -1729,6 +1780,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1742,6 +1794,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -1816,6 +1869,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1829,6 +1883,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -1915,6 +1970,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -1928,6 +1984,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -2029,7 +2086,9 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
             "inspect": false
           },
           "mappings": [],
@@ -2055,8 +2114,10 @@
             },
             "properties": [
               {
-                "id": "custom.displayMode",
-                "value": "color-text"
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-text"
+                }
               },
               {
                 "id": "mappings",
@@ -2119,8 +2180,10 @@
                 ]
               },
               {
-                "id": "custom.displayMode",
-                "value": "color-text"
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-text"
+                }
               }
             ]
           }
@@ -2134,14 +2197,18 @@
       },
       "id": 56,
       "options": {
+        "cellHeight": "sm",
         "footer": {
+          "countRows": false,
           "fields": "",
-          "reducer": ["sum"],
+          "reducer": [
+            "sum"
+          ],
           "show": false
         },
         "showHeader": true
       },
-      "pluginVersion": "9.3.6",
+      "pluginVersion": "11.1.0",
       "targets": [
         {
           "datasource": "Prometheus",
@@ -2203,6 +2270,7 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "",
@@ -2216,6 +2284,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 2,
             "pointSize": 5,
@@ -2257,7 +2326,6 @@
         "y": 47
       },
       "id": 52,
-      "links": [],
       "options": {
         "legend": {
           "calcs": [],
@@ -2310,7 +2378,7 @@
         {
           "datasource": "loki",
           "editorMode": "code",
-          "expr": "{service=\"charon\"} | logfmt | line_format \"{{.pretty}}\"",
+          "expr": "{cluster_hash=\"${cluster_hash}\"} | logfmt| line_format \"{{.pretty}}\"",
           "queryType": "range",
           "refId": "A",
           "resolution": 1
@@ -2320,9 +2388,8 @@
       "type": "logs"
     }
   ],
-  "refresh": "30s",
-  "schemaVersion": 37,
-  "style": "dark",
+  "refresh": "10s",
+  "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": [
@@ -2452,6 +2519,6 @@
   "timezone": "",
   "title": "Charon",
   "uid": "charo-1Vcx3GJ2Vk",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
