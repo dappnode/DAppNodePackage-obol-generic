@@ -8,7 +8,7 @@ services:
         VALIDATOR_CLIENT_VERSION: v1.22.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 1
-    restart: on-failure
+    restart: unless-stopped
     volumes:
       - charon-1-data:/opt/charon/.charon
       - validator-1-data:/opt/validator/data
@@ -40,7 +40,7 @@ services:
         VALIDATOR_CLIENT_VERSION: v1.22.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 2
-    restart: on-failure
+    restart: unless-stopped
     volumes:
       - charon-2-data:/opt/charon/.charon
       - validator-2-data:/opt/validator/data
@@ -72,7 +72,7 @@ services:
         VALIDATOR_CLIENT_VERSION: v1.22.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 3
-    restart: on-failure
+    restart: unless-stopped
     volumes:
       - charon-3-data:/opt/charon/.charon
       - validator-3-data:/opt/validator/data
@@ -104,7 +104,7 @@ services:
         VALIDATOR_CLIENT_VERSION: v1.22.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 4
-    restart: on-failure
+    restart: unless-stopped
     volumes:
       - charon-4-data:/opt/charon/.charon
       - validator-4-data:/opt/validator/data
@@ -136,7 +136,7 @@ services:
         VALIDATOR_CLIENT_VERSION: v1.22.0
         STAKER_SCRIPTS_VERSION: v0.1.0
         CLUSTER_ID: 5
-    restart: on-failure
+    restart: unless-stopped
     volumes:
       - charon-5-data:/opt/charon/.charon
       - validator-5-data:/opt/validator/data
