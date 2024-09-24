@@ -1,0 +1,58 @@
+[
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-1.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-1.gnosis-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-1.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-1.gnosis-obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-2.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-2.gnosis-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-2.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-2.gnosis-obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-3.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-3.gnosis-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-3.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-3.gnosis-obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-4.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-4.gnosis-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "gnosis-obol.dnp.dappnode.eth",
+      "service": "cluster-5.gnosis-obol.dappnode"
+    },
+    "targets": ["cluster-5.gnosis-obol.dappnode:8008"]
+  }
+]
