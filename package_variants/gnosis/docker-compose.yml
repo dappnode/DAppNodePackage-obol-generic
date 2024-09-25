@@ -1,0 +1,46 @@
+services:
+  cluster-1:
+    build:
+      args:
+        NETWORK: gnosis
+        P2P_TCP_PORT: 3811
+        P2P_UDP_PORT: 3831
+    ports:
+      - 3811:3811/tcp
+      - 3831:3831/udp
+  cluster-2:
+    build:
+      args:
+        NETWORK: gnosis
+        P2P_TCP_PORT: 3812
+        P2P_UDP_PORT: 3832
+    ports:
+      - 3812:3812/tcp
+      - 3832:3832/udp
+  cluster-3:
+    build:
+      args:
+        NETWORK: gnosis
+        P2P_TCP_PORT: 3813
+        P2P_UDP_PORT: 3833
+    ports:
+      - 3813:3813/tcp
+      - 3833:3833/udp
+  cluster-4:
+    build:
+      args:
+        NETWORK: gnosis
+        P2P_TCP_PORT: 3814
+        P2P_UDP_PORT: 3834
+    ports:
+      - 3814:3814/tcp
+      - 3834:3834/udp
+  cluster-5:
+    build:
+      args:
+        NETWORK: gnosis
+        P2P_TCP_PORT: 3815
+        P2P_UDP_PORT: 3835
+    ports:
+      - 3815:3815/tcp
+      - 3835:3835/udp
