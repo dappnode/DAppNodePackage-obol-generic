@@ -23,7 +23,7 @@ Under the Info tab, see pre-generated ENRs and validator containers' status.
 1. Use the appropriate launchpad for your network:
    - [Holesky Launchpad](https://holesky.launchpad.obol.org/)
    - [Mainnet Launchpad](https://mainnet.launchpad.obol.org/)
-   - [Gnosis Launchpad](https://gnosis.launchpad.obol.org/)
+   - [Gnosis Launchpad](https://gnosischain.launchpad.obol.org/)
 2. Follow instructions to sign with your wallet and provide an ENR from the DappNode info section
 3. Obtain the cluster definition file URL for the DKG ceremony. [More info](https://docs.obol.org/docs/start/quickstart_group#install-the-obol-dappnode-package)
 
