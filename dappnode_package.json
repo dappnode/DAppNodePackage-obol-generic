@@ -24,6 +24,7 @@
   "links": {
     "homepage": "https://obol.tech/"
   },
+  "architectures": ["linux/amd64", "linux/arm64"],
   "backup": [
     {
       "name": "charon1",
