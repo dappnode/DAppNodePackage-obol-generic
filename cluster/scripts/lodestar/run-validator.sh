@@ -19,10 +19,6 @@ function run_lodestar_validator() {
         VALIDATOR_EXTRA_OPTS="--builder=true --builder.selection=builderalways $VALIDATOR_EXTRA_OPTS"
     fi
 
-    if [ "$USE_PRODUCE_BLOCK_V3" = true ]; then
-        VALIDATOR_EXTRA_OPTS="--useProduceBlockV3=true $VALIDATOR_EXTRA_OPTS"
-    fi
-
     if [ -n "$VALIDATOR_EXTRA_OPTS" ]; then
         flags="${flags} ${VALIDATOR_EXTRA_OPTS}"
     fi
