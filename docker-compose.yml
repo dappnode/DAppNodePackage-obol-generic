@@ -6,7 +6,7 @@ services:
       args:
         CHARON_VERSION: v1.1.2
         VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 1
     restart: unless-stopped
     volumes:
@@ -38,7 +38,7 @@ services:
       args:
         CHARON_VERSION: v1.1.2
         VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 2
     restart: unless-stopped
     volumes:
@@ -70,7 +70,7 @@ services:
       args:
         CHARON_VERSION: v1.1.2
         VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 3
     restart: unless-stopped
     volumes:
@@ -102,7 +102,7 @@ services:
       args:
         CHARON_VERSION: v1.1.2
         VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 4
     restart: unless-stopped
     volumes:
@@ -134,7 +134,7 @@ services:
       args:
         CHARON_VERSION: v1.1.2
         VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 5
     restart: unless-stopped
     volumes:
