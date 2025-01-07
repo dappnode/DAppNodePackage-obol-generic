@@ -24,10 +24,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -56,10 +55,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -88,10 +86,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -120,10 +117,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -152,10 +148,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
