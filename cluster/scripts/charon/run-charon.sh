@@ -89,7 +89,7 @@ function check_DKG() {
     # If the definition file URL is set and the lock file does not exist, start DKG ceremony
     if [ -n "${DEFINITION_FILE_URL}" ] && [ ! -f "${CHARON_LOCK_FILE}" ]; then
         echo "${INFO} Waiting for DKG ceremony..."
-        charon dkg --definition-file="${DEFINITION_FILE_URL}" --data-dir="${CHARON_ROOT_DIR}" || {
+        charon dkg --definition-file="${DEFINITION_FILE_URL}" --data-dir="${CHARON_ROOT_DIR}" --publish || {
             echo "${ERROR} DKG ceremony failed"
             exit 1
         }
