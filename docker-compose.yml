@@ -4,9 +4,9 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.1.0
-        VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        CHARON_VERSION: v1.2.0
+        VALIDATOR_CLIENT_VERSION: v1.24.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 1
     restart: unless-stopped
     volumes:
@@ -24,10 +24,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -36,9 +35,9 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.1.0
-        VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        CHARON_VERSION: v1.2.0
+        VALIDATOR_CLIENT_VERSION: v1.24.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 2
     restart: unless-stopped
     volumes:
@@ -56,10 +55,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -68,9 +66,9 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.1.0
-        VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        CHARON_VERSION: v1.2.0
+        VALIDATOR_CLIENT_VERSION: v1.24.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 3
     restart: unless-stopped
     volumes:
@@ -88,10 +86,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -100,9 +97,9 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.1.0
-        VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        CHARON_VERSION: v1.2.0
+        VALIDATOR_CLIENT_VERSION: v1.24.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 4
     restart: unless-stopped
     volumes:
@@ -120,10 +117,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -132,9 +128,9 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.1.0
-        VALIDATOR_CLIENT_VERSION: v1.22.0
-        STAKER_SCRIPTS_VERSION: v0.1.0
+        CHARON_VERSION: v1.2.0
+        VALIDATOR_CLIENT_VERSION: v1.24.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
         CLUSTER_ID: 5
     restart: unless-stopped
     volumes:
@@ -152,10 +148,9 @@ services:
       - GRAFFITI=validating_from_DAppNode
       - JAVA_OPTS=-Xmx5g
       - SIGN_EXIT=false
-      - EXIT_EPOCH
+      - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
-      - USE_PRODUCE_BLOCK_V3=false
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:

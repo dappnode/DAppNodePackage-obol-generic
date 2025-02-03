@@ -2,20 +2,21 @@
   "upstream": [
     {
       "repo": "ObolNetwork/charon",
-      "version": "v1.1.0",
+      "version": "v1.2.0",
       "arg": "CHARON_VERSION"
     },
     {
       "repo": "ChainSafe/lodestar",
-      "version": "v1.22.0",
+      "version": "v1.24.0",
       "arg": "VALIDATOR_CLIENT_VERSION"
     },
     {
       "repo": "dappnode/staker-package-scripts",
-      "version": "v0.1.0",
+      "version": "v0.1.1",
       "arg": "STAKER_SCRIPTS_VERSION"
     }
   ],
+  "architectures": ["linux/amd64", "linux/arm64"],
   "shortDescription": "Obol Node for Distributed validation + validator client",
   "description": "Charon is a GoLang-based, HTTP middleware built by Obol to enable any existing Ethereum validator clients to operate together as part of a distributed validator.\nCharon sits as a middleware between a normal validating client and its connected beacon node, intercepting and proxying API traffic. Multiple Charon clients are configured to communicate together to come to consensus on validator duties and behave as a single unified proof-of-stake validator together. The nodes form a cluster that is byzantine-fault tolerant and continues to progress assuming a supermajority of working/honest nodes is met.",
   "type": "service",
