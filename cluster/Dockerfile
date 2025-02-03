@@ -17,7 +17,10 @@ RUN apt-get update && \
 
 RUN mkdir -p /opt/validator/bin /usr/local/bin/scripts/charon /usr/local/bin/scripts/lodestar && \
     curl -L https://github.com/ChainSafe/lodestar/releases/download/${VALIDATOR_CLIENT_VERSION}/lodestar-${VALIDATOR_CLIENT_VERSION}-linux-amd64.tar.gz | tar -xz -C /opt/validator/bin && \
-    chmod +x /opt/validator/bin/lodestar
+    mv /opt/validator/bin/lodestar /opt/validator/bin/lodestar-amd64 && chmod +x /opt/validator/bin/lodestar-amd64
+
+RUN curl -L https://github.com/ChainSafe/lodestar/releases/download/${VALIDATOR_CLIENT_VERSION}/lodestar-${VALIDATOR_CLIENT_VERSION}-linux-arm64.tar.gz | tar -xz -C /opt/validator/bin && \
+    mv /opt/validator/bin/lodestar /opt/validator/bin/lodestar-arm64 && chmod +x /opt/validator/bin/lodestar-arm64
 
 COPY scripts /usr/local/bin/scripts
 COPY supervisord.conf /etc/supervisord.conf
