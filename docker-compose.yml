@@ -27,6 +27,7 @@ services:
       - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
+      - CHARON_NICKNAME=${CHARON_NICKNAME:-}
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -58,6 +59,7 @@ services:
       - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
+      - CHARON_NICKNAME=${CHARON_NICKNAME:-}
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -89,6 +91,7 @@ services:
       - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
+      - CHARON_NICKNAME=${CHARON_NICKNAME:-}
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -120,6 +123,7 @@ services:
       - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
+      - CHARON_NICKNAME=${CHARON_NICKNAME:-}
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -151,6 +155,7 @@ services:
       - EXIT_EPOCH=256
       - VALIDATOR_EXTRA_OPTS
       - CUSTOM_BEACON_NODE_URLS
+      - CHARON_NICKNAME=${CHARON_NICKNAME:-}
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
