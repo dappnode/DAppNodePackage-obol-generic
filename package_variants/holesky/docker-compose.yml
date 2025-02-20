@@ -2,6 +2,7 @@ services:
   cluster-1:
     build:
       args:
+        CHARON_VERSION: 77b153e # to be deleted once pectra release is tagged in a normal version
         NETWORK: holesky
         P2P_TCP_PORT: 3711
         P2P_UDP_PORT: 3731
@@ -11,6 +12,7 @@ services:
   cluster-2:
     build:
       args:
+        CHARON_VERSION: 77b153e # to be deleted once pectra release is tagged in a normal version
         NETWORK: holesky
         P2P_TCP_PORT: 3712
         P2P_UDP_PORT: 3732
@@ -20,6 +22,7 @@ services:
   cluster-3:
     build:
       args:
+        CHARON_VERSION: 77b153e # to be deleted once pectra release is tagged in a normal version
         NETWORK: holesky
         P2P_TCP_PORT: 3713
         P2P_UDP_PORT: 3733
@@ -29,6 +32,7 @@ services:
   cluster-4:
     build:
       args:
+        CHARON_VERSION: 77b153e # to be deleted once pectra release is tagged in a normal version
         NETWORK: holesky
         P2P_TCP_PORT: 3714
         P2P_UDP_PORT: 3734
@@ -38,6 +42,7 @@ services:
   cluster-5:
     build:
       args:
+        CHARON_VERSION: 77b153e # to be deleted once pectra release is tagged in a normal version
         NETWORK: holesky
         P2P_TCP_PORT: 3715
         P2P_UDP_PORT: 3735
