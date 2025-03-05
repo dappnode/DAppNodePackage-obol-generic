@@ -7,6 +7,7 @@ ARG STAKER_SCRIPTS_VERSION
 ARG NETWORK
 ARG P2P_TCP_PORT
 ARG P2P_UDP_PORT
+ARG TARGETARCH
 
 USER root
 
@@ -16,8 +17,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 RUN mkdir -p /opt/validator/bin /usr/local/bin/scripts/charon /usr/local/bin/scripts/lodestar && \
-    curl -L https://github.com/ChainSafe/lodestar/releases/download/${VALIDATOR_CLIENT_VERSION}/lodestar-${VALIDATOR_CLIENT_VERSION}-linux-amd64.tar.gz | tar -xz -C /opt/validator/bin && \
-    chmod +x /opt/validator/bin/lodestar
+    curl -L https://github.com/ChainSafe/lodestar/releases/download/${VALIDATOR_CLIENT_VERSION}/lodestar-${VALIDATOR_CLIENT_VERSION}-linux-${TARGETARCH}.tar.gz | tar -xz -C /opt/validator/bin && \
+    mv /opt/validator/bin/lodestar /opt/validator/bin/lodestar-${TARGETARCH} && chmod +x /opt/validator/bin/lodestar-${TARGETARCH}
 
 COPY scripts /usr/local/bin/scripts
 COPY supervisord.conf /etc/supervisord.conf
