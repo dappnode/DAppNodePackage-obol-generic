@@ -26,7 +26,7 @@ function run_lodestar_validator() {
     echo "${INFO} Starting Lodestar validator with flags: ${flags}"
 
     # shellcheck disable=SC2086
-    exec ${VALIDATOR_SERVICE_BIN} ${flags}
+    exec ${VALIDATOR_SERVICE_BIN}-$(dpkg --print-architecture) ${flags}
 }
 
 run_lodestar_validator
