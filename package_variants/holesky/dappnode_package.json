@@ -1,6 +1,6 @@
 {
   "name": "holesky-obol.dnp.dappnode.eth",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "globalEnvs": [
     {
       "envs": ["CONSENSUS_CLIENT_HOLESKY", "DOMAIN"],
