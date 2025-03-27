@@ -2,17 +2,17 @@
   "upstream": [
     {
       "repo": "ObolNetwork/charon",
-      "version": "v1.2.0",
+      "version": "v1.3.0",
       "arg": "CHARON_VERSION"
     },
     {
       "repo": "ChainSafe/lodestar",
-      "version": "v1.24.0",
+      "version": "v1.28.1",
       "arg": "VALIDATOR_CLIENT_VERSION"
     },
     {
       "repo": "dappnode/staker-package-scripts",
-      "version": "v0.1.1",
+      "version": "v0.1.2",
       "arg": "STAKER_SCRIPTS_VERSION"
     }
   ],
