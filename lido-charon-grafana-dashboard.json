@@ -6377,6 +6377,11 @@
           },
           {
             "selected": false,
+            "text": "hoodi",
+            "value": "hoodi"
+          },
+          {
+            "selected": false,
             "text": "sepolia",
             "value": "sepolia"
           },
