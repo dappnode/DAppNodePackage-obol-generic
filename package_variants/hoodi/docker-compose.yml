@@ -1,0 +1,46 @@
+services:
+  cluster-1:
+    build:
+      args:
+        NETWORK: hoodi
+        P2P_TCP_PORT: 3911
+        P2P_UDP_PORT: 3931
+    ports:
+      - 3911:3911/tcp
+      - 3931:3931/udp
+  cluster-2:
+    build:
+      args:
+        NETWORK: hoodi
+        P2P_TCP_PORT: 3912
+        P2P_UDP_PORT: 3932
+    ports:
+      - 3912:3912/tcp
+      - 3932:3932/udp
+  cluster-3:
+    build:
+      args:
+        NETWORK: hoodi
+        P2P_TCP_PORT: 3913
+        P2P_UDP_PORT: 3933
+    ports:
+      - 3913:3913/tcp
+      - 3933:3933/udp
+  cluster-4:
+    build:
+      args:
+        NETWORK: hoodi
+        P2P_TCP_PORT: 3914
+        P2P_UDP_PORT: 3934
+    ports:
+      - 3914:3914/tcp
+      - 3934:3934/udp
+  cluster-5:
+    build:
+      args:
+        NETWORK: hoodi
+        P2P_TCP_PORT: 3915
+        P2P_UDP_PORT: 3935
+    ports:
+      - 3915:3915/tcp
+      - 3935:3935/udp

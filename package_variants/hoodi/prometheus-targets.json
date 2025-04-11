@@ -1,0 +1,58 @@
+[
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-1.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-1.hoodi-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-1.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-1.hoodi-obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-2.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-2.hoodi-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-2.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-2.hoodi-obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-3.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-3.hoodi-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-3.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-3.hoodi-obol.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-4.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-4.hoodi-obol.dappnode:3620"]
+  },
+  {
+    "labels": {
+      "package": "hoodi-obol.dnp.dappnode.eth",
+      "service": "cluster-5.hoodi-obol.dappnode"
+    },
+    "targets": ["cluster-5.hoodi-obol.dappnode:8008"]
+  }
+]
