@@ -4,7 +4,7 @@ For detailed steps and screenshots, please refer to [Obol docs](https://docs.obo
 
 ### Preparing your Ethereum node (pre-requisite)
 
-1. Go to [Stakers tab](http://my.dappnode/stakers/ethereum) and select the desired network (Ethereum mainnet, holesky...)
+1. Go to [Stakers tab](http://my.dappnode/stakers/ethereum) and select the desired network (Ethereum mainnet, hoodi, holesky...)
 2. Choose an execution client (e.g. Nethermind) and a consensus client (e.g. Lodestar)
 3. Click "Apply changes" and wait for install and sync processes.
 
@@ -21,9 +21,11 @@ Under the Info tab, see pre-generated ENRs and validator containers' status.
 ### Create a DV cluster on Obol launchpad
 
 1. Use the appropriate launchpad for your network:
-   - [Holesky Launchpad](https://holesky.launchpad.obol.org/)
    - [Mainnet Launchpad](https://mainnet.launchpad.obol.org/)
    - [Gnosis Launchpad](https://gnosischain.launchpad.obol.org/)
+   - [Holesky Launchpad](https://holesky.launchpad.obol.org/)
+   - [Hoodi Launchpad](https://hoodi.launchpad.obol.org/)
+
 2. Follow instructions to sign with your wallet and provide an ENR from the DappNode info section
 3. Obtain the cluster definition file URL for the DKG ceremony. [More info](https://docs.obol.org/docs/start/quickstart_group#install-the-obol-dappnode-package)
 

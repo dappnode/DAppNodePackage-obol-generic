@@ -1,0 +1,16 @@
+{
+  "name": "hoodi-obol.dnp.dappnode.eth",
+  "version": "0.1.0",
+  "globalEnvs": [
+    {
+      "envs": ["CONSENSUS_CLIENT_HOODI", "DOMAIN"],
+      "services": [
+        "cluster-1",
+        "cluster-2",
+        "cluster-3",
+        "cluster-4",
+        "cluster-5"
+      ]
+    }
+  ]
+}
