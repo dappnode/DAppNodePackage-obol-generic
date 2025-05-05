@@ -2,7 +2,7 @@
   "upstream": [
     {
       "repo": "ObolNetwork/charon",
-      "version": "v1.3.0",
+      "version": "v1.4.0",
       "arg": "CHARON_VERSION"
     },
     {
