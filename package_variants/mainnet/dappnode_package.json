@@ -1,6 +1,6 @@
 {
   "name": "obol.dnp.dappnode.eth",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "globalEnvs": [
     {
       "envs": ["CONSENSUS_CLIENT_MAINNET", "DOMAIN"],
