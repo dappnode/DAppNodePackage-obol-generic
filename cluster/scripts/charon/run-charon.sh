@@ -28,7 +28,7 @@ export CHARON_P2P_EXTERNAL_HOSTNAME=${_DAPPNODE_GLOBAL_DOMAIN}
 #############
 
 function get_beacon_node_endpoint() {
-    local supported_networks="mainnet holesky gnosis hoodi"
+    local supported_networks="mainnet gnosis hoodi"
     local local_beacon_api
 
     local_beacon_api=$(get_beacon_api_url_from_global_env "$NETWORK" "$supported_networks")

@@ -6372,11 +6372,6 @@
           },
           {
             "selected": false,
-            "text": "holesky",
-            "value": "holesky"
-          },
-          {
-            "selected": false,
             "text": "hoodi",
             "value": "hoodi"
           },
@@ -6391,7 +6386,7 @@
             "value": "gnosis"
           }
         ],
-        "query": "mainnet,goerli,holesky,sepolia,gnosis",
+        "query": "mainnet,hoodi,sepolia,gnosis",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
