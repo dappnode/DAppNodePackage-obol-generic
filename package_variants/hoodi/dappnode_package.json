@@ -1,6 +1,6 @@
 {
   "name": "hoodi-obol.dnp.dappnode.eth",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "globalEnvs": [
     {
       "envs": ["CONSENSUS_CLIENT_HOODI", "DOMAIN"],
