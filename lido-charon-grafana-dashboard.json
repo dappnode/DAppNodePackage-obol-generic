@@ -397,7 +397,7 @@
                       "2": {
                         "color": "purple",
                         "index": 1,
-                        "text": "Goerli"
+                        "text": "Hoodi"
                       },
                       "3": {
                         "color": "purple",
@@ -449,7 +449,7 @@
           "datasource": "Prometheus",
           "editorMode": "code",
           "exemplar": false,
-          "expr": "( 1 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"mainnet\"} )\nor \n( 2 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"goerli\"} )\nor\n( 3 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"sepolia\"} )\nor\n( 4 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"gnosis\"} )",
+          "expr": "( 1 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"mainnet\"} )\nor \n( 2 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"hoodi\"} )\nor\n( 3 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"sepolia\"} )\nor\n( 4 * app_version{cluster_name=\"$cluster_name\",cluster_hash=\"$cluster_hash\",cluster_peer=\"$cluster_peer\", cluster_network=\"gnosis\"} )",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -6364,11 +6364,6 @@
             "selected": false,
             "text": "mainnet",
             "value": "mainnet"
-          },
-          {
-            "selected": false,
-            "text": "goerli",
-            "value": "goerli"
           },
           {
             "selected": false,
