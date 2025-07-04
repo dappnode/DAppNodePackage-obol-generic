@@ -17,6 +17,8 @@ services:
       - CHARON_LOG_LEVEL=info
       - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
       - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_P2P_TCP_ADDRESS
+      - CHARON_P2P_UDP_ADDRESS
       - CHARON_LOKI_SERVICE=cluster-1
       - ENABLE_MEV_BOOST=false
       - CHARON_EXTRA_OPTS
@@ -49,6 +51,8 @@ services:
       - CHARON_LOG_LEVEL=info
       - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
       - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_P2P_TCP_ADDRESS
+      - CHARON_P2P_UDP_ADDRESS
       - CHARON_LOKI_SERVICE=cluster-2
       - ENABLE_MEV_BOOST=false
       - CHARON_EXTRA_OPTS
@@ -81,6 +85,8 @@ services:
       - CHARON_LOG_LEVEL=info
       - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
       - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_P2P_TCP_ADDRESS
+      - CHARON_P2P_UDP_ADDRESS
       - CHARON_LOKI_SERVICE=cluster-3
       - ENABLE_MEV_BOOST=false
       - CHARON_EXTRA_OPTS
@@ -113,6 +119,8 @@ services:
       - CHARON_LOG_LEVEL=info
       - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
       - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_P2P_TCP_ADDRESS
+      - CHARON_P2P_UDP_ADDRESS
       - CHARON_LOKI_SERVICE=cluster-4
       - ENABLE_MEV_BOOST=false
       - CHARON_EXTRA_OPTS
@@ -145,6 +153,8 @@ services:
       - CHARON_LOG_LEVEL=info
       - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
       - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
+      - CHARON_P2P_TCP_ADDRESS
+      - CHARON_P2P_UDP_ADDRESS
       - CHARON_LOKI_SERVICE=cluster-5
       - ENABLE_MEV_BOOST=false
       - CHARON_EXTRA_OPTS
