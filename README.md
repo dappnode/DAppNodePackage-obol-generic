@@ -38,6 +38,21 @@ This package includes the following services:
 
   Only the `Definition File URL` is mandatory for starting the DKG process. All other fields are optional and can be left blank during setup if importing configuration via file or URL.
 
+### Advanced config
+
+- **P2P Ports**: To modify the default P2P ports, you will have to:
+1. **Advanced Config**  
+   Set these environment variables:
+   - `CHARON_P2P_TCP_ADDRESS` → `0.0.0.0:<NEW_TCP_PORT>`
+   - `CHARON_P2P_UDP_ADDRESS` → `0.0.0.0:<NEW_UDP_PORT>`
+
+2. **Network** tab  
+   Add the corresponding port mappings:
+   - `<NEW_TCP_PORT>:<NEW_TCP_PORT>` (TCP)
+   - `<NEW_UDP_PORT>:<NEW_UDP_PORT>` (UDP)  
+   > The env vars **must** match the published ports. If they differ, external peers won’t be able to reach your node.
+
+
 ### Script Integration
 
 - **Staker Tools Integration**: The `dvt_lsd_tools.sh` script is sourced from the `staker-package-scripts` repository. It is downloaded during the Docker build process using the release version specified in the `STAKER_SCRIPTS_VERSION` argument. The script is placed in `/etc/profile.d/` to manage staking-related operations.
