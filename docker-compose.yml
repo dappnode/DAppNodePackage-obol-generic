@@ -13,23 +13,21 @@ services:
       - charon-1-data:/opt/charon/.charon
       - validator-1-data:/opt/validator/data
     environment:
-      - DEFINITION_FILE_URL
-      - CHARON_LOG_LEVEL=info
-      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
-      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
-      - CHARON_P2P_TCP_ADDRESS
-      - CHARON_P2P_UDP_ADDRESS
-      - CHARON_LOKI_SERVICE=cluster-1
-      - ENABLE_MEV_BOOST=false
-      - CHARON_EXTRA_OPTS
-      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-      - GRAFFITI=validating_from_DAppNode
-      - JAVA_OPTS=-Xmx5g
-      - SIGN_EXIT=false
-      - EXIT_EPOCH=256
-      - VALIDATOR_EXTRA_OPTS
-      - CUSTOM_BEACON_NODE_URLS
-      - CHARON_NICKNAME
+      DEFINITION_FILE_URL: ""
+      CHARON_LOG_LEVEL: "info"
+      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
+      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
+      CHARON_LOKI_SERVICE: "cluster-1"
+      ENABLE_MEV_BOOST: "false"
+      CHARON_EXTRA_OPTS: ""
+      DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
+      GRAFFITI: "validating_from_DAppNode"
+      JAVA_OPTS: "-Xmx5g"
+      SIGN_EXIT: "false"
+      EXIT_EPOCH: "256"
+      VALIDATOR_EXTRA_OPTS: ""
+      CUSTOM_BEACON_NODE_URLS: ""
+      CHARON_NICKNAME: ""
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -47,23 +45,23 @@ services:
       - charon-2-data:/opt/charon/.charon
       - validator-2-data:/opt/validator/data
     environment:
-      - DEFINITION_FILE_URL
-      - CHARON_LOG_LEVEL=info
-      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
-      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
-      - CHARON_P2P_TCP_ADDRESS
-      - CHARON_P2P_UDP_ADDRESS
-      - CHARON_LOKI_SERVICE=cluster-2
-      - ENABLE_MEV_BOOST=false
-      - CHARON_EXTRA_OPTS
-      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-      - GRAFFITI=validating_from_DAppNode
-      - JAVA_OPTS=-Xmx5g
-      - SIGN_EXIT=false
-      - EXIT_EPOCH=256
-      - VALIDATOR_EXTRA_OPTS
-      - CUSTOM_BEACON_NODE_URLS
-      - CHARON_NICKNAME
+      DEFINITION_FILE_URL: ""
+      CHARON_LOG_LEVEL: "info"
+      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
+      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
+      CHARON_P2P_TCP_ADDRESS: ""
+      CHARON_P2P_UDP_ADDRESS: ""
+      CHARON_LOKI_SERVICE: "cluster-2"
+      ENABLE_MEV_BOOST: "false"
+      CHARON_EXTRA_OPTS: ""
+      DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
+      GRAFFITI: "validating_from_DAppNode"
+      JAVA_OPTS: "-Xmx5g"
+      SIGN_EXIT: "false"
+      EXIT_EPOCH: "256"
+      VALIDATOR_EXTRA_OPTS: ""
+      CUSTOM_BEACON_NODE_URLS: ""
+      CHARON_NICKNAME: ""
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -81,23 +79,21 @@ services:
       - charon-3-data:/opt/charon/.charon
       - validator-3-data:/opt/validator/data
     environment:
-      - DEFINITION_FILE_URL
-      - CHARON_LOG_LEVEL=info
-      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
-      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
-      - CHARON_P2P_TCP_ADDRESS
-      - CHARON_P2P_UDP_ADDRESS
-      - CHARON_LOKI_SERVICE=cluster-3
-      - ENABLE_MEV_BOOST=false
-      - CHARON_EXTRA_OPTS
-      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-      - GRAFFITI=validating_from_DAppNode
-      - JAVA_OPTS=-Xmx5g
-      - SIGN_EXIT=false
-      - EXIT_EPOCH=256
-      - VALIDATOR_EXTRA_OPTS
-      - CUSTOM_BEACON_NODE_URLS
-      - CHARON_NICKNAME
+      DEFINITION_FILE_URL: ""
+      CHARON_LOG_LEVEL: "info"
+      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
+      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
+      CHARON_LOKI_SERVICE: "cluster-3"
+      ENABLE_MEV_BOOST: "false"
+      CHARON_EXTRA_OPTS: ""
+      DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
+      GRAFFITI: "validating_from_DAppNode"
+      JAVA_OPTS: "-Xmx5g"
+      SIGN_EXIT: "false"
+      EXIT_EPOCH: "256"
+      VALIDATOR_EXTRA_OPTS: ""
+      CUSTOM_BEACON_NODE_URLS: ""
+      CHARON_NICKNAME: ""
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -115,23 +111,21 @@ services:
       - charon-4-data:/opt/charon/.charon
       - validator-4-data:/opt/validator/data
     environment:
-      - DEFINITION_FILE_URL
-      - CHARON_LOG_LEVEL=info
-      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
-      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
-      - CHARON_P2P_TCP_ADDRESS
-      - CHARON_P2P_UDP_ADDRESS
-      - CHARON_LOKI_SERVICE=cluster-4
-      - ENABLE_MEV_BOOST=false
-      - CHARON_EXTRA_OPTS
-      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-      - GRAFFITI=validating_from_DAppNode
-      - JAVA_OPTS=-Xmx5g
-      - SIGN_EXIT=false
-      - EXIT_EPOCH=256
-      - VALIDATOR_EXTRA_OPTS
-      - CUSTOM_BEACON_NODE_URLS
-      - CHARON_NICKNAME
+      DEFINITION_FILE_URL: ""
+      CHARON_LOG_LEVEL: "info"
+      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
+      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
+      CHARON_LOKI_SERVICE: "cluster-4"
+      ENABLE_MEV_BOOST: "false"
+      CHARON_EXTRA_OPTS: ""
+      DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
+      GRAFFITI: "validating_from_DAppNode"
+      JAVA_OPTS: "-Xmx5g"
+      SIGN_EXIT: "false"
+      EXIT_EPOCH: "256"
+      VALIDATOR_EXTRA_OPTS: ""
+      CUSTOM_BEACON_NODE_URLS: ""
+      CHARON_NICKNAME: ""
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:
@@ -149,23 +143,21 @@ services:
       - charon-5-data:/opt/charon/.charon
       - validator-5-data:/opt/validator/data
     environment:
-      - DEFINITION_FILE_URL
-      - CHARON_LOG_LEVEL=info
-      - CHARON_LOKI_ADDRESSES=http://loki.dms.dappnode:3100/loki/api/v1/push
-      - CHARON_P2P_RELAYS=https://0.relay.obol.tech,https://1.relay.obol.tech/
-      - CHARON_P2P_TCP_ADDRESS
-      - CHARON_P2P_UDP_ADDRESS
-      - CHARON_LOKI_SERVICE=cluster-5
-      - ENABLE_MEV_BOOST=false
-      - CHARON_EXTRA_OPTS
-      - DEFAULT_FEE_RECIPIENT=0x0000000000000000000000000000000000000000
-      - GRAFFITI=validating_from_DAppNode
-      - JAVA_OPTS=-Xmx5g
-      - SIGN_EXIT=false
-      - EXIT_EPOCH=256
-      - VALIDATOR_EXTRA_OPTS
-      - CUSTOM_BEACON_NODE_URLS
-      - CHARON_NICKNAME
+      DEFINITION_FILE_URL: ""
+      CHARON_LOG_LEVEL: "info"
+      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
+      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
+      CHARON_LOKI_SERVICE: "cluster-5"
+      ENABLE_MEV_BOOST: "false"
+      CHARON_EXTRA_OPTS: ""
+      DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
+      GRAFFITI: "validating_from_DAppNode"
+      JAVA_OPTS: "-Xmx5g"
+      SIGN_EXIT: "false"
+      EXIT_EPOCH: "256"
+      VALIDATOR_EXTRA_OPTS: ""
+      CUSTOM_BEACON_NODE_URLS: ""
+      CHARON_NICKNAME: ""
     healthcheck:
       test: wget -qO- http://localhost:3620/readyz
     security_opt:

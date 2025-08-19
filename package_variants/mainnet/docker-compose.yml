@@ -3,8 +3,9 @@ services:
     build:
       args:
         NETWORK: mainnet
-        P2P_TCP_PORT: 3411
-        P2P_UDP_PORT: 3431
+    environment:
+      CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3411"
+      CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3431"
     ports:
       - 3411:3411/tcp
       - 3431:3431/udp
@@ -12,8 +13,9 @@ services:
     build:
       args:
         NETWORK: mainnet
-        P2P_TCP_PORT: 3412
-        P2P_UDP_PORT: 3432
+    environment:
+      CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3412"
+      CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3432"
     ports:
       - 3412:3412/tcp
       - 3432:3432/udp
@@ -21,8 +23,9 @@ services:
     build:
       args:
         NETWORK: mainnet
-        P2P_TCP_PORT: 3413
-        P2P_UDP_PORT: 3433
+    environment:
+      CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3413"
+      CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3433"
     ports:
       - 3413:3413/tcp
       - 3433:3433/udp
@@ -30,8 +33,9 @@ services:
     build:
       args:
         NETWORK: mainnet
-        P2P_TCP_PORT: 3414
-        P2P_UDP_PORT: 3434
+    environment:
+      CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3414"
+      CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3434"
     ports:
       - 3414:3414/tcp
       - 3434:3434/udp
@@ -39,8 +43,9 @@ services:
     build:
       args:
         NETWORK: mainnet
-        P2P_TCP_PORT: 3415
-        P2P_UDP_PORT: 3435
+    environment:
+      CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3415"
+      CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3435"
     ports:
       - 3415:3415/tcp
       - 3435:3435/udp
