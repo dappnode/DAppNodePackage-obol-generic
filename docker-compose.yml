@@ -4,7 +4,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.5.1
+        CHARON_VERSION: v1.6.0
         VALIDATOR_CLIENT_VERSION: v1.33.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 1
@@ -14,14 +14,14 @@ services:
       - validator-1-data:/opt/validator/data
     environment:
       DEFINITION_FILE_URL: ""
-      CHARON_LOG_LEVEL: "info"
-      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
-      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
-      CHARON_LOKI_SERVICE: "cluster-1"
+      CHARON_LOG_LEVEL: info
+      CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
+      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/
+      CHARON_LOKI_SERVICE: cluster-1
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
       DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
-      GRAFFITI: "validating_from_DAppNode"
+      GRAFFITI: validating_from_DAppNode
       JAVA_OPTS: "-Xmx5g"
       SIGN_EXIT: "false"
       EXIT_EPOCH: "256"
@@ -36,7 +36,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.5.1
+        CHARON_VERSION: v1.6.0
         VALIDATOR_CLIENT_VERSION: v1.33.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 2
@@ -46,16 +46,16 @@ services:
       - validator-2-data:/opt/validator/data
     environment:
       DEFINITION_FILE_URL: ""
-      CHARON_LOG_LEVEL: "info"
-      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
-      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
+      CHARON_LOG_LEVEL: info
+      CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
+      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/
       CHARON_P2P_TCP_ADDRESS: ""
       CHARON_P2P_UDP_ADDRESS: ""
-      CHARON_LOKI_SERVICE: "cluster-2"
+      CHARON_LOKI_SERVICE: cluster-2
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
       DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
-      GRAFFITI: "validating_from_DAppNode"
+      GRAFFITI: validating_from_DAppNode
       JAVA_OPTS: "-Xmx5g"
       SIGN_EXIT: "false"
       EXIT_EPOCH: "256"
@@ -70,7 +70,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.5.1
+        CHARON_VERSION: v1.6.0
         VALIDATOR_CLIENT_VERSION: v1.33.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 3
@@ -80,14 +80,14 @@ services:
       - validator-3-data:/opt/validator/data
     environment:
       DEFINITION_FILE_URL: ""
-      CHARON_LOG_LEVEL: "info"
-      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
-      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
-      CHARON_LOKI_SERVICE: "cluster-3"
+      CHARON_LOG_LEVEL: info
+      CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
+      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/
+      CHARON_LOKI_SERVICE: cluster-3
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
       DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
-      GRAFFITI: "validating_from_DAppNode"
+      GRAFFITI: validating_from_DAppNode
       JAVA_OPTS: "-Xmx5g"
       SIGN_EXIT: "false"
       EXIT_EPOCH: "256"
@@ -102,7 +102,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.5.1
+        CHARON_VERSION: v1.6.0
         VALIDATOR_CLIENT_VERSION: v1.33.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 4
@@ -112,14 +112,14 @@ services:
       - validator-4-data:/opt/validator/data
     environment:
       DEFINITION_FILE_URL: ""
-      CHARON_LOG_LEVEL: "info"
-      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
-      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
-      CHARON_LOKI_SERVICE: "cluster-4"
+      CHARON_LOG_LEVEL: info
+      CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
+      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/
+      CHARON_LOKI_SERVICE: cluster-4
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
       DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
-      GRAFFITI: "validating_from_DAppNode"
+      GRAFFITI: validating_from_DAppNode
       JAVA_OPTS: "-Xmx5g"
       SIGN_EXIT: "false"
       EXIT_EPOCH: "256"
@@ -134,7 +134,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.5.1
+        CHARON_VERSION: v1.6.0
         VALIDATOR_CLIENT_VERSION: v1.33.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 5
@@ -144,14 +144,14 @@ services:
       - validator-5-data:/opt/validator/data
     environment:
       DEFINITION_FILE_URL: ""
-      CHARON_LOG_LEVEL: "info"
-      CHARON_LOKI_ADDRESSES: "http://loki.dms.dappnode:3100/loki/api/v1/push"
-      CHARON_P2P_RELAYS: "https://0.relay.obol.tech,https://1.relay.obol.tech/"
-      CHARON_LOKI_SERVICE: "cluster-5"
+      CHARON_LOG_LEVEL: info
+      CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
+      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/
+      CHARON_LOKI_SERVICE: cluster-5
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
       DEFAULT_FEE_RECIPIENT: "0x0000000000000000000000000000000000000000"
-      GRAFFITI: "validating_from_DAppNode"
+      GRAFFITI: validating_from_DAppNode
       JAVA_OPTS: "-Xmx5g"
       SIGN_EXIT: "false"
       EXIT_EPOCH: "256"
