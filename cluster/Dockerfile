@@ -10,13 +10,23 @@ ARG TARGETARCH
 USER root
 
 RUN apt-get update && \
-    apt-get --yes --no-install-recommends install curl jq zip xz-utils inotify-tools supervisor && \
+    apt-get --yes --no-install-recommends install bash curl jq zip xz-utils inotify-tools supervisor && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-RUN mkdir -p /opt/validator/bin /usr/local/bin/scripts/charon /usr/local/bin/scripts/lodestar && \
-    curl -L https://github.com/ChainSafe/lodestar/releases/download/${VALIDATOR_CLIENT_VERSION}/lodestar-${VALIDATOR_CLIENT_VERSION}-linux-${TARGETARCH}.tar.gz | tar -xz -C /opt/validator/bin && \
-    mv /opt/validator/bin/lodestar /opt/validator/bin/lodestar-${TARGETARCH} && chmod +x /opt/validator/bin/lodestar-${TARGETARCH}
+
+RUN set -eux; \
+    mkdir -p /opt/validator/bin /usr/local/bin/scripts/charon /usr/local/bin/scripts/lodestar; \
+    curl -L "https://github.com/ChainSafe/lodestar/releases/download/${VALIDATOR_CLIENT_VERSION}/lodestar-${VALIDATOR_CLIENT_VERSION}-linux-${TARGETARCH}.tar.gz" \
+    | tar -xz -C /opt/validator/bin; \
+    # Si el tar deja el binario dentro de una carpeta, muévelo
+    if [ ! -f /opt/validator/bin/lodestar ]; then \
+    L="$(find /opt/validator/bin -maxdepth 2 -type f -name lodestar | head -n1)"; \
+    test -n "$L" && mv "$L" /opt/validator/bin/lodestar; \
+    fi; \
+    chmod +x /opt/validator/bin/lodestar; \
+    # Symlink estable esperado por tus scripts
+    ln -sf /opt/validator/bin/lodestar /opt/validator/bin/lodestar-${TARGETARCH}
 
 COPY scripts /usr/local/bin/scripts
 COPY supervisord.conf /etc/supervisord.conf
@@ -37,7 +47,7 @@ ADD ${STAKER_SCRIPTS_URL}/dvt_lsd_tools.sh /etc/profile.d/
 
 RUN mkdir -p ${CHARON_ROOT_DIR} ${VALIDATOR_DATA_DIR} ${IMPORT_DIR} ${SUPERVISOR_DIR} && \
     chown -R charon:charon /opt/charon && \
-    chmod +x /usr/local/bin/scripts/**/* && \
+    chmod -R +x /usr/local/bin/scripts && \
     chmod +rx /etc/profile.d/dvt_lsd_tools.sh
 
 # To import here the artifacts from file manager by default
