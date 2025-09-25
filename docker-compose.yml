@@ -24,7 +24,7 @@ services:
       GRAFFITI: validating_from_DAppNode
       JAVA_OPTS: "-Xmx5g"
       SIGN_EXIT: "false"
-      EXIT_EPOCH: "256"
+      EXIT_EPOCH: "194048"
       VALIDATOR_EXTRA_OPTS: ""
       CUSTOM_BEACON_NODE_URLS: ""
       CHARON_NICKNAME: ""
