@@ -4,8 +4,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
-        VALIDATOR_CLIENT_VERSION: v1.34.1
+        CHARON_VERSION: v1.7.0
+        VALIDATOR_CLIENT_VERSION: v1.35.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 1
     restart: unless-stopped
@@ -36,8 +36,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
-        VALIDATOR_CLIENT_VERSION: v1.34.1
+        CHARON_VERSION: v1.7.0
+        VALIDATOR_CLIENT_VERSION: v1.35.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 2
     restart: unless-stopped
@@ -70,8 +70,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
-        VALIDATOR_CLIENT_VERSION: v1.34.1
+        CHARON_VERSION: v1.7.0
+        VALIDATOR_CLIENT_VERSION: v1.35.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 3
     restart: unless-stopped
@@ -102,8 +102,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
-        VALIDATOR_CLIENT_VERSION: v1.34.1
+        CHARON_VERSION: v1.7.0
+        VALIDATOR_CLIENT_VERSION: v1.35.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 4
     restart: unless-stopped
@@ -134,8 +134,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
-        VALIDATOR_CLIENT_VERSION: v1.34.1
+        CHARON_VERSION: v1.7.0
+        VALIDATOR_CLIENT_VERSION: v1.35.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 5
     restart: unless-stopped
