@@ -12,6 +12,7 @@ ENR_FILE=${CHARON_ROOT_DIR}/enr
 DEFINITION_FILE_URL_FILE=${CHARON_ROOT_DIR}/definition_file_url.txt
 
 CHARON_LOCK_FILE=${CHARON_ROOT_DIR}/cluster-lock.json
+CHARON_ADDED_VALIDATOR_STATE_FILE=${CHARON_ROOT_DIR}/.charon_added_validator_state
 
 if [ -n "$DEFINITION_FILE_URL" ]; then
     echo "$DEFINITION_FILE_URL" >$DEFINITION_FILE_URL_FILE
@@ -106,11 +107,10 @@ function check_DKG() {
 }
 
 function run_charon() {
-    if [ "$ENABLE_MEV_BOOST" = true ]; then
-        CHARON_EXTRA_OPTS="--builder-api $CHARON_EXTRA_OPTS"
+    if [ "$ENABLE_MEV_BOOST" = true ] || [ -f $CHARON_ADDED_VALIDATOR_STATE_FILE ]; then
+        CHARON_EXTRA_OPTS="--builder-api --no-verify $CHARON_EXTRA_OPTS"
+        exec charon run --private-key-file=$ENR_PRIVATE_KEY_FILE --lock-file=$CHARON_LOCK_FILE ${CHARON_EXTRA_OPTS}
     fi
-
-    exec charon run --private-key-file=$ENR_PRIVATE_KEY_FILE --lock-file=$CHARON_LOCK_FILE ${CHARON_EXTRA_OPTS}
 }
 
 ########
