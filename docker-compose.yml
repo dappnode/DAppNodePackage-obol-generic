@@ -4,7 +4,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
+        CHARON_VERSION: v1.7.1
         VALIDATOR_CLIENT_VERSION: v1.34.1
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 1
@@ -37,7 +37,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
+        CHARON_VERSION: v1.7.1
         VALIDATOR_CLIENT_VERSION: v1.34.1
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 2
@@ -72,7 +72,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
+        CHARON_VERSION: v1.7.1
         VALIDATOR_CLIENT_VERSION: v1.34.1
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 3
@@ -105,7 +105,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
+        CHARON_VERSION: v1.7.1
         VALIDATOR_CLIENT_VERSION: v1.34.1
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 4
@@ -138,7 +138,7 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.6.1
+        CHARON_VERSION: v1.7.1
         VALIDATOR_CLIENT_VERSION: v1.34.1
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 5
