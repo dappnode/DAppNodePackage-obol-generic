@@ -11,7 +11,7 @@ run_validator_logic() {
     echo "${INFO} Add validators for $CHARON_SERVICE_NAME"
 
     # Check if ADD_VALIDATOR is setting in config for current running service
-    if [[ "$ADD_VALIDATOR_TARGET_CLUSTER" == "$CHARON_SERVICE_NAME" ]]; then
+    if [[ "$ADD_VALIDATOR_TARGET_CLUSTER" =~ (^|,)($CHARON_SERVICE_NAME)(,|$) ]]; then
         echo "${INFO} Start running charon add-validators command"
 
         charon alpha add-validators \
@@ -19,11 +19,13 @@ run_validator_logic() {
             --num-validators "$ADD_VALIDATOR_NUM_VALIDATORS" \
             --withdrawal-addresses="$ADD_VALIDATOR_WITHDRAWAL_ADDRESS" \
             --fee-recipient-addresses="$ADD_VALIDATOR_FEE_RECEPIENT_ADDRESS" \
+            --p2p-relays https://4.relay.obol.dev \
             --output-dir=/tmp/.charon
 
         if [[ $? -ne 0 ]]; then
             echo "${INFO} charon add-validators failed. Exiting..."
             rm -f /import/add_validator
+            rm -rf /tmp/.charon
             exit 1
         fi
 
@@ -31,7 +33,7 @@ run_validator_logic() {
         supervisorctl stop charon lodestar
 
         echo "${INFO} Upgrade .charon directory with backing up previous .charon to /tmp/.charon"
-        mv "$CHARON_ROOT_DIR" /tmp/.charon.bck && mv /tmp/.charon "$CHARON_ROOT_DIR"
+        cp -r "$CHARON_ROOT_DIR" /tmp/.charon.bck && mv /tmp/.charon "$CHARON_ROOT_DIR"
 
         echo "${INFO} Starting charon and lodestar processes..."
         supervisorctl start charon lodestar
