@@ -6,6 +6,7 @@ services:
     environment:
       CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3411"
       CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3431"
+      EXIT_EPOCH: "194048"
     ports:
       - 3411:3411/tcp
       - 3431:3431/udp
@@ -16,6 +17,7 @@ services:
     environment:
       CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3412"
       CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3432"
+      EXIT_EPOCH: "194048"
     ports:
       - 3412:3412/tcp
       - 3432:3432/udp
@@ -26,6 +28,7 @@ services:
     environment:
       CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3413"
       CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3433"
+      EXIT_EPOCH: "194048"
     ports:
       - 3413:3413/tcp
       - 3433:3433/udp
@@ -36,6 +39,7 @@ services:
     environment:
       CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3414"
       CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3434"
+      EXIT_EPOCH: "194048"
     ports:
       - 3414:3414/tcp
       - 3434:3434/udp
@@ -46,6 +50,7 @@ services:
     environment:
       CHARON_P2P_TCP_ADDRESS: "0.0.0.0:3415"
       CHARON_P2P_UDP_ADDRESS: "0.0.0.0:3435"
+      EXIT_EPOCH: "194048"
     ports:
       - 3415:3415/tcp
       - 3435:3435/udp
