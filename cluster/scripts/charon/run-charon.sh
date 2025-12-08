@@ -37,7 +37,7 @@ function get_beacon_node_endpoint() {
     if [ -n "$CUSTOM_BEACON_NODE_URLS" ]; then
 
         if [ -n "$local_beacon_api" ]; then
-            CHARON_BEACON_NODE_ENDPOINTS="$CHARON_BEACON_NODE_ENDPOINTS,$local_beacon_api"
+            CHARON_BEACON_NODE_ENDPOINTS="$CUSTOM_BEACON_NODE_URLS,$local_beacon_api"
         else
             CHARON_BEACON_NODE_ENDPOINTS=$CUSTOM_BEACON_NODE_URLS
         fi
@@ -107,8 +107,14 @@ function check_DKG() {
 }
 
 function run_charon() {
+    if [ "$ENABLE_MEV_BOOST" = true ] && [ -f "$CHARON_ADDED_VALIDATOR_STATE_FILE" ]; then
+        CHARON_EXTRA_OPTS="--builder-api --no-verify ${CHARON_EXTRA_OPTS}"
+
+    elif [ "$ENABLE_MEV_BOOST" = true ]; then
+        CHARON_EXTRA_OPTS="--builder-api ${CHARON_EXTRA_OPTS}"
+    fi
+
     if [ "$ENABLE_MEV_BOOST" = true ] || [ -f $CHARON_ADDED_VALIDATOR_STATE_FILE ]; then
-        CHARON_EXTRA_OPTS="--builder-api --no-verify $CHARON_EXTRA_OPTS"
         exec charon run --private-key-file=$ENR_PRIVATE_KEY_FILE --lock-file=$CHARON_LOCK_FILE ${CHARON_EXTRA_OPTS}
     fi
 }
