@@ -4,8 +4,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.7.1
-        VALIDATOR_CLIENT_VERSION: v1.36.0
+        CHARON_VERSION: v1.7.2
+        VALIDATOR_CLIENT_VERSION: v1.38.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 1
     restart: unless-stopped
@@ -16,7 +16,8 @@ services:
       DEFINITION_FILE_URL: ""
       CHARON_LOG_LEVEL: info
       CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
-      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
+      CHARON_P2P_RELAYS: >-
+        https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
       CHARON_LOKI_SERVICE: cluster-1
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
@@ -36,8 +37,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.7.1
-        VALIDATOR_CLIENT_VERSION: v1.36.0
+        CHARON_VERSION: v1.7.2
+        VALIDATOR_CLIENT_VERSION: v1.38.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 2
     restart: unless-stopped
@@ -48,7 +49,8 @@ services:
       DEFINITION_FILE_URL: ""
       CHARON_LOG_LEVEL: info
       CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
-      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
+      CHARON_P2P_RELAYS: >-
+        https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
       CHARON_P2P_TCP_ADDRESS: ""
       CHARON_P2P_UDP_ADDRESS: ""
       CHARON_LOKI_SERVICE: cluster-2
@@ -70,8 +72,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.7.1
-        VALIDATOR_CLIENT_VERSION: v1.36.0
+        CHARON_VERSION: v1.7.2
+        VALIDATOR_CLIENT_VERSION: v1.38.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 3
     restart: unless-stopped
@@ -82,7 +84,8 @@ services:
       DEFINITION_FILE_URL: ""
       CHARON_LOG_LEVEL: info
       CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
-      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
+      CHARON_P2P_RELAYS: >-
+        https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
       CHARON_LOKI_SERVICE: cluster-3
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
@@ -102,8 +105,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.7.1
-        VALIDATOR_CLIENT_VERSION: v1.36.0
+        CHARON_VERSION: v1.7.2
+        VALIDATOR_CLIENT_VERSION: v1.38.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 4
     restart: unless-stopped
@@ -114,7 +117,8 @@ services:
       DEFINITION_FILE_URL: ""
       CHARON_LOG_LEVEL: info
       CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
-      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
+      CHARON_P2P_RELAYS: >-
+        https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
       CHARON_LOKI_SERVICE: cluster-4
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
@@ -134,8 +138,8 @@ services:
     build:
       context: cluster
       args:
-        CHARON_VERSION: v1.7.1
-        VALIDATOR_CLIENT_VERSION: v1.36.0
+        CHARON_VERSION: v1.7.2
+        VALIDATOR_CLIENT_VERSION: v1.38.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 5
     restart: unless-stopped
@@ -146,7 +150,8 @@ services:
       DEFINITION_FILE_URL: ""
       CHARON_LOG_LEVEL: info
       CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
-      CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
+      CHARON_P2P_RELAYS: >-
+        https://0.relay.obol.tech,https://1.relay.obol.tech/,https://2.relay.obol.dev
       CHARON_LOKI_SERVICE: cluster-5
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
