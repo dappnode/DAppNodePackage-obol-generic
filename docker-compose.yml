@@ -151,7 +151,7 @@ services:
       CHARON_LOG_LEVEL: info
       CHARON_LOKI_ADDRESSES: http://loki.dms.dappnode:3100/loki/api/v1/push
       CHARON_P2P_RELAYS: https://0.relay.obol.tech,https://1.relay.obol.tech/
-      CHARON_SERVICE_NAME: cluster-1
+      CHARON_SERVICE_NAME: cluster-5
       CHARON_LOKI_SERVICE: cluster-5
       ENABLE_MEV_BOOST: "false"
       CHARON_EXTRA_OPTS: ""
