@@ -7,7 +7,7 @@ fields:
 
       **READ BEFORE PROCEEDING**
 
-      This package contains 5 instances of Obol, so you can run up to 5 clusters with different people. Each cluster will have its own configuration. You can have a Cluster being part of Lido's SDVTM and another one with your friends and up to 5 different clusters. Each cluster can handle hundreds of validators.
+      This package contains 5 instances of Obol, so you can run up to 5 clusters with different people. Each cluster will have its own configuration. You can have a Cluster being part of Lido's SDVT Module and another one with your friends (up to 5 different clusters). Each cluster can handle hundreds of validators.
       
       It is **highly recommended** that you backup the package every time you make a change to the configuration of any of the clusters!
 
