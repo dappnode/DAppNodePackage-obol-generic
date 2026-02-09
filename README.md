@@ -1,6 +1,6 @@
 # Obol Dappnode Package
 
-This package runs **Obol Charon**, a distributed validator (DV) middleware, along with a **Prometheus metrics service** and a **validator client**. It allows you to run up to five DV clusters with different configurations, interacting with the Ethereum blockchain.
+This package runs **Obol's Charon** client, a [distributed validator](https://docs.obol.org/learn/readme/key-concepts) (DV) middleware, along with a **Prometheus metrics service** and a **validator client**. It allows you to run up to five DV clusters with different configurations, interacting with the Ethereum blockchain.
 
 ### Services
 
@@ -41,6 +41,7 @@ This package includes the following services:
 ### Advanced config
 
 - **P2P Ports**: To modify the default P2P ports, you will have to:
+
 1. **Advanced Config**  
    Set these environment variables:
    - `CHARON_P2P_TCP_ADDRESS` → `0.0.0.0:<NEW_TCP_PORT>`
@@ -49,9 +50,8 @@ This package includes the following services:
 2. **Network** tab  
    Add the corresponding port mappings:
    - `<NEW_TCP_PORT>:<NEW_TCP_PORT>` (TCP)
-   - `<NEW_UDP_PORT>:<NEW_UDP_PORT>` (UDP)  
-   > The env vars **must** match the published ports. If they differ, external peers won’t be able to reach your node.
-
+   - `<NEW_UDP_PORT>:<NEW_UDP_PORT>` (UDP)
+     > The env vars **must** match the published ports. If they differ, external peers won’t be able to reach your node.
 
 ### Script Integration
 
@@ -80,4 +80,4 @@ To configure which clusters to monitor, specify the `CHARONS_TO_MONITOR` variabl
 
 ---
 
-For more detailed steps and documentation, please refer to the [Obol documentation](https://docs.obol.tech).
+For more detailed steps and documentation, please refer to the [Obol documentation](https://docs.obol.org).
