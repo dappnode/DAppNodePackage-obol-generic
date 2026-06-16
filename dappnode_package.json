@@ -1,30 +1,9 @@
 {
-  "upstream": [
-    {
-      "repo": "ObolNetwork/charon",
-      "version": "v1.10.1",
-      "arg": "CHARON_VERSION"
-    },
-    {
-      "repo": "ChainSafe/lodestar",
-      "version": "v1.43.0",
-      "arg": "VALIDATOR_CLIENT_VERSION"
-    },
-    {
-      "repo": "dappnode/staker-package-scripts",
-      "version": "v0.1.2",
-      "arg": "STAKER_SCRIPTS_VERSION"
-    }
+  "architectures": [
+    "linux/amd64",
+    "linux/arm64"
   ],
-  "architectures": ["linux/amd64", "linux/arm64"],
-  "shortDescription": "Obol Node for Distributed validation + validator client",
-  "description": "Charon is a GoLang-based, HTTP middleware built by Obol to enable any existing Ethereum validator clients to operate together as part of a distributed validator.\nCharon sits as a middleware between a normal validating client and its connected beacon node, intercepting and proxying API traffic. Multiple Charon clients are configured to communicate together to come to consensus on validator duties and behave as a single unified proof-of-stake validator together. The nodes form a cluster that is byzantine-fault tolerant and continues to progress assuming a supermajority of working/honest nodes is met.",
-  "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
-  "categories": ["ETH2.0"],
-  "links": {
-    "homepage": "https://obol.org/"
-  },
   "backup": [
     {
       "name": "charon1",
@@ -52,12 +31,38 @@
       "service": "cluster-5"
     }
   ],
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-obol-generic/issues"
+  },
+  "categories": [
+    "ETH2.0"
+  ],
+  "description": "Charon is a GoLang-based, HTTP middleware built by Obol to enable any existing Ethereum validator clients to operate together as part of a distributed validator.\nCharon sits as a middleware between a normal validating client and its connected beacon node, intercepting and proxying API traffic. Multiple Charon clients are configured to communicate together to come to consensus on validator duties and behave as a single unified proof-of-stake validator together. The nodes form a cluster that is byzantine-fault tolerant and continues to progress assuming a supermajority of working/honest nodes is met.",
   "license": "GPL-3.0",
+  "links": {
+    "homepage": "https://obol.org/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dappnode/DAppNodePackage-obol-generic.git"
   },
-  "bugs": {
-    "url": "https://github.com/dappnode/DAppNodePackage-obol-generic/issues"
-  }
+  "shortDescription": "Obol Node for Distributed validation + validator client",
+  "type": "service",
+  "upstream": [
+    {
+      "arg": "CHARON_VERSION",
+      "repo": "ObolNetwork/charon",
+      "version": "v1.10.2"
+    },
+    {
+      "arg": "VALIDATOR_CLIENT_VERSION",
+      "repo": "ChainSafe/lodestar",
+      "version": "v1.43.0"
+    },
+    {
+      "arg": "STAKER_SCRIPTS_VERSION",
+      "repo": "dappnode/staker-package-scripts",
+      "version": "v0.1.2"
+    }
+  ]
 }
