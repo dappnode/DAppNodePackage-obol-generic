@@ -57,7 +57,7 @@
     {
       "arg": "VALIDATOR_CLIENT_VERSION",
       "repo": "ChainSafe/lodestar",
-      "version": "v1.43.0"
+      "version": "v1.45.0"
     },
     {
       "arg": "STAKER_SCRIPTS_VERSION",
