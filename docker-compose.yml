@@ -5,7 +5,7 @@ services:
       context: cluster
       args:
         CHARON_VERSION: v1.10.2
-        VALIDATOR_CLIENT_VERSION: v1.43.0
+        VALIDATOR_CLIENT_VERSION: v1.46.0
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 1
     restart: unless-stopped
