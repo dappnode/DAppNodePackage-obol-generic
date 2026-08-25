@@ -52,7 +52,7 @@
     {
       "arg": "CHARON_VERSION",
       "repo": "ObolNetwork/charon",
-      "version": "v1.10.2"
+      "version": "v1.11.0"
     },
     {
       "arg": "VALIDATOR_CLIENT_VERSION",
