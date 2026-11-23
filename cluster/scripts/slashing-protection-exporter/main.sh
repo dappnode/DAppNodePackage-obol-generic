@@ -5,7 +5,9 @@ INFO="[ INFO | slashing-protection-exporter ]"
 # Exports the slashing protection DB when the container stops, so a backup copied from the
 # stopped container has it exactly. supervisord stops programs in reverse priority order,
 # waiting for each one: this program has the lowest priority, so it is stopped after
-# Lodestar, once the validator can no longer sign and has released the DB lock.
+# Lodestar, once the validator can no longer sign and has released the DB lock. The export has
+# its own time budget, below the stopwaitsecs of this program in supervisord.conf, so that it
+# fails with an error in the logs instead of being killed by supervisord.
 
 function on_stop() {
     kill "${SLEEP_PID}" 2>/dev/null
@@ -16,6 +18,8 @@ function on_stop() {
 trap on_stop TERM INT
 
 mkdir -p "${SLASHING_PROTECTION_DIR}"
+# Temp files of an export that was killed (e.g. the host went down while exporting)
+rm -rf "${VALIDATOR_DATA_DIR}/.slashing-protection-export"
 echo "${INFO} The slashing protection DB will be exported to ${SLASHING_PROTECTION_DIR} when the container stops"
 
 sleep infinity &
