@@ -5,5 +5,6 @@ SCRIPT_DIR=$(dirname "$0")
 
 "$SCRIPT_DIR/wait-for-charon.sh"
 "$SCRIPT_DIR/keystore-import.sh"
+"$SCRIPT_DIR/slashing-protection-import.sh" || exit 1
 "$SCRIPT_DIR/sign-exit.sh"
 "$SCRIPT_DIR/run-validator.sh"

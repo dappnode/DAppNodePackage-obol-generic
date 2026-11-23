@@ -29,6 +29,31 @@
       "name": "charon5",
       "path": "/opt/charon/.charon",
       "service": "cluster-5"
+    },
+    {
+      "name": "slashing-protection1",
+      "path": "/opt/validator/data/slashing-protection",
+      "service": "cluster-1"
+    },
+    {
+      "name": "slashing-protection2",
+      "path": "/opt/validator/data/slashing-protection",
+      "service": "cluster-2"
+    },
+    {
+      "name": "slashing-protection3",
+      "path": "/opt/validator/data/slashing-protection",
+      "service": "cluster-3"
+    },
+    {
+      "name": "slashing-protection4",
+      "path": "/opt/validator/data/slashing-protection",
+      "service": "cluster-4"
+    },
+    {
+      "name": "slashing-protection5",
+      "path": "/opt/validator/data/slashing-protection",
+      "service": "cluster-5"
     }
   ],
   "bugs": {
