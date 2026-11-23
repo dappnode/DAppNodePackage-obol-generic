@@ -70,7 +70,7 @@ This package includes the following services:
 The package supports backup and restore functionality for each Charon cluster. You can back up critical data, such as the Charon configuration and validator data, from the Dappnode UI. This feature allows users to restore their DV setup in case of system failure or during migration to a new node.
 
 - **Charon Config**: `/opt/charon/.charon` (for each cluster).
-- **Validator Slashing Protection**: `/opt/validator/data/slashing-protection` (for each cluster). It holds an EIP-3076 interchange export of the Lodestar slashing protection DB, written when the container stops, after the validator has stopped. The Dappmanager stops validator packages before it copies their backup, so the backup matches the DB exactly. When a restored export is found, it is imported into the DB before the validator starts.
+- **Validator Slashing Protection**: `/opt/validator/data/slashing-protection` (for each cluster). It holds EIP-3076 interchange files exported from the Lodestar slashing protection DB when the container stops, after the validator has stopped (`interchange.json`, or `interchange-N.json` with a few validators each for a big DB). A Dappmanager that stops validator packages before copying their backup gets the DB exactly. On older Dappmanager versions the Backup tab copies from the running package, so it gets the export from the last stop: **stop the package before downloading the backup**. When restored interchange files are found, they are imported into the DB before the validator starts.
 
 ### Monitoring
 
