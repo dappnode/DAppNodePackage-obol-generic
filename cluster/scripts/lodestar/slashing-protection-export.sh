@@ -23,7 +23,8 @@ function _interchange_checksum() {
     cat "${SLASHING_PROTECTION_DIR}"/interchange*.json 2>/dev/null | sha256sum | cut -d' ' -f1
 }
 
-# Exports to file $1, for the pubkeys $2 (comma separated) or all of them
+# Exports to file $1, for the pubkeys $2 (comma separated) or all of them. Returns 2 if the
+# validator did not release the DB
 function _export() {
     local output attempt
 
@@ -42,6 +43,7 @@ function _export() {
 
     echo "${ERROR} Lodestar slashing protection export failed:"
     echo "${output}" | tail -5
+    [[ "${output}" == *"already in use"* ]] && return 2
     return 1
 }
 
@@ -71,7 +73,7 @@ function _fail() {
 }
 
 function export_slashing_protection() {
-    local checksum
+    local checksum status
 
     mkdir -p "${SLASHING_PROTECTION_DIR}"
 
@@ -91,15 +93,21 @@ function export_slashing_protection() {
     mkdir -p "${TMP_DIR}"
 
     if [ "$(du -sm "${VALIDATOR_DB_DIR}" | cut -f1)" -gt "${SPLIT_DB_SIZE_MB}" ]; then
-        _export_split || {
-            _fail
-            return 1
-        }
-    elif ! _export "${TMP_DIR}/interchange.json"; then
-        _export_split || {
-            _fail
-            return 1
-        }
+        _export_split
+        status=$?
+    else
+        _export "${TMP_DIR}/interchange.json"
+        status=$?
+        # Too big for one file (see SPLIT_DB_SIZE_MB), unless the validator still holds the DB
+        if [ "${status}" -eq 1 ]; then
+            _export_split
+            status=$?
+        fi
+    fi
+
+    if [ "${status}" -ne 0 ]; then
+        _fail
+        return 1
     fi
 
     # Replace the previous files. Interrupted here, the files do not match SYNCED_FILE and are
