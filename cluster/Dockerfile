@@ -35,6 +35,7 @@ ENV CLUSTER_ID=${CLUSTER_ID} \
     CHARON_LOG_FORMAT=console \
     VALIDATOR_SERVICE_BIN=/opt/validator/bin/lodestar \
     VALIDATOR_DATA_DIR=/opt/validator/data \
+    SLASHING_PROTECTION_DIR=/opt/validator/data/slashing-protection \
     VALIDATOR_METRICS_PORT=8008 \
     CHARON_VALIDATOR_API_ADDRESS="0.0.0.0:3600" \
     CHARON_MONITORING_ADDRESS="0.0.0.0:3620" \
@@ -45,7 +46,7 @@ ENV CLUSTER_ID=${CLUSTER_ID} \
 
 ADD ${STAKER_SCRIPTS_URL}/dvt_lsd_tools.sh /etc/profile.d/
 
-RUN mkdir -p ${CHARON_ROOT_DIR} ${VALIDATOR_DATA_DIR} ${IMPORT_DIR} ${SUPERVISOR_DIR} && \
+RUN mkdir -p ${CHARON_ROOT_DIR} ${VALIDATOR_DATA_DIR} ${SLASHING_PROTECTION_DIR} ${IMPORT_DIR} ${SUPERVISOR_DIR} && \
     chown -R charon:charon /opt/charon && \
     chmod -R +x /usr/local/bin/scripts && \
     chmod +rx /etc/profile.d/dvt_lsd_tools.sh

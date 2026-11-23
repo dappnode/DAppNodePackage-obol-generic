@@ -52,7 +52,7 @@ Stopped containers for inactive clusters are normal. This saves system resources
 
 ### Backup
 
-It's recommended to save a backup of the relevant data of each cluster. You can download it from the Backup tab of the package. There, you can also restore a backup after you have provided the `definition-file-url` in the setup wizard or in the Config of the package.
+It's recommended to save a backup of the relevant data of each cluster. You can download it from the Backup tab of the package. There, you can also restore a backup after you have provided the `definition-file-url` in the setup wizard or in the Config of the package. The backup includes the validators' slashing protection as it was when the package last stopped: stop the package before downloading the backup so that it is up to date.
 
 ### Upload a Node Artifact
 

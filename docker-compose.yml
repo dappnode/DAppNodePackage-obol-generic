@@ -9,6 +9,8 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 1
     restart: unless-stopped
+    # Lodestar stop plus the slashing protection export, see cluster/supervisord.conf
+    stop_grace_period: 10m
     volumes:
       - charon-1-data:/opt/charon/.charon
       - validator-1-data:/opt/validator/data
@@ -42,6 +44,8 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 2
     restart: unless-stopped
+    # Lodestar stop plus the slashing protection export, see cluster/supervisord.conf
+    stop_grace_period: 10m
     volumes:
       - charon-2-data:/opt/charon/.charon
       - validator-2-data:/opt/validator/data
@@ -77,6 +81,8 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 3
     restart: unless-stopped
+    # Lodestar stop plus the slashing protection export, see cluster/supervisord.conf
+    stop_grace_period: 10m
     volumes:
       - charon-3-data:/opt/charon/.charon
       - validator-3-data:/opt/validator/data
@@ -110,6 +116,8 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 4
     restart: unless-stopped
+    # Lodestar stop plus the slashing protection export, see cluster/supervisord.conf
+    stop_grace_period: 10m
     volumes:
       - charon-4-data:/opt/charon/.charon
       - validator-4-data:/opt/validator/data
@@ -143,6 +151,8 @@ services:
         STAKER_SCRIPTS_VERSION: v0.1.2
         CLUSTER_ID: 5
     restart: unless-stopped
+    # Lodestar stop plus the slashing protection export, see cluster/supervisord.conf
+    stop_grace_period: 10m
     volumes:
       - charon-5-data:/opt/charon/.charon
       - validator-5-data:/opt/validator/data
