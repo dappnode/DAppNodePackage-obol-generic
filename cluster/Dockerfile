@@ -10,7 +10,7 @@ ARG TARGETARCH
 USER root
 
 RUN apt-get update && \
-    apt-get --yes --no-install-recommends install bash curl jq zip xz-utils inotify-tools supervisor && \
+    apt-get --yes --no-install-recommends install bash curl jq zip xz-utils inotify-tools supervisor libatomic1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
